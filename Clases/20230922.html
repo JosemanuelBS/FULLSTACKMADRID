@@ -1,0 +1,529 @@
+
+    
+    <!--
+    INICIO CLASE 2023/09/22 SEGUNDA CLASE
+
+    %%%%%%%%%%%%%%%%%%%%%%%
+    REPASO CLASE ANTERIOR:
+
+        FRONT END DEVELOPER
+        BACKEND DEVELOPER
+        FULLSTACK DEVELOPER
+
+        - TERMINAL DE COMANDOS
+            - cmd ABRIR TERMINAL DE COMANDOS
+            - cd CAMBIO DIRECTORIO
+            - cd .. NAVEGAR A UN DIRECTORIO DE NIVEL SUPERIOR
+            - mkdir AÑADIR UN DIRECTORIO
+            - rmdir BORRAR UN DIRECTORIO
+
+        - INSTALACION DE GIT, CONTROL DE VERSIONES Y TRABAJAR DE MANERA COLABORATIVA
+
+        - CREAMOS CUENTA DE GITHUB, PARA ALMACENAR LAS VERSIONES DEL GIT
+            EN LA TERMINAL DE COMANDOS
+
+            - Git init INICIALIZAMOS GIT
+            - Git clone "url" CLONAMOS EL REPOSITORIO DE GITHUB EN EL PC LOCAL
+            - Git status VEMOS QUE MODIFICACIONES HA HABIDO EN EL REPOSITORIO
+            - Git add . AÑADIMOS ESAS MODIFICACIONES AL STAGING AREA
+            - Git commit -m "COMENTARIO" HACEMOS UN COMMIT DE LOS CAMBIO, LOS ACEPTAMOS
+            - Git config user.name "Nombre" AÑADIMOS NOMBRE USUARIO
+            - Git config user.email "EMAIL" AÑADIMOS EL EMAIL DE LA CUENTA DE GITHUB
+            - Git push SUBIMOS LOS CAMBIOS A GITHUB
+
+    
+
+
+
+        %%%%%%%%%%%%%%%%%%%
+        FIN DEL REPASO
+
+
+- DIAPOSITIVA 01 ROL HTML
+
+LO PRIMERO QUE VAMOS HACER UNA VEZ INSTALADO VISUAL STUDIO, ABRIMOS LA CARPETA FULLSTACK
+CON VISUAL STUDIO. BOTON DERECHO ABRIR CON
+
+ CREAMOS UN NUEVA CARPETA PARA EL PROYECTO
+
+ EN ESTA CARPETA VAN A ESTAR TODOS LOS ARCHIVOS
+
+ A CONTINUACION CREAMOS NUESTRO PRIMER ARCHIVO
+
+ index.html ARCHIVO PRINCIPAL
+
+ ESTRUCTURA DE HTML
+
+ html:5 Y A CONTINUACION TAB O ! HACEN LO MISMO
+
+ 
+
+-->
+<!-- aaa -->
+
+
+
+<!DOCTYPE html> <!-- ES HTML5 PERO A PARTIR LA ULTIMA VERSION YA NO LE PONEN EL NÚMERO-->
+<html lang="es">
+<!-- IDIOMA QUE UTILIZAREMOS EN LA WEB, IMPORTANTE PARA EL SEO 
+
+IMPORTANTÍSIMO COMENTAR EL CÓDIGO, PARA PODER IDENTIFICAR QUE SE ESTÁ HACIENDO EN CADA PARTE DEL MISMO
+
+UN CÓDIGO SIN COMENTARIOS ES COMO UN LIBRO SIN ÍNDICE-->
+
+<!-- -->
+
+<head>
+    <!-- ETIQUETA LO QUE EL NAVEGADOR TIENE QUE ENTENDER 
+    EL HEAD ES LO QUE NO SE VE, ES SOLO PARA EL NAVEGADOR-->
+    <meta charset="UTF-8"> <!-- PARA QUE UTILICE LOS CARATCTERES ESPECIALES, TILDES, Ñ...-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--INFORMACION MAS ESPECIFICA DEL NAVEGADOR-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fullstack</title> <!-- TITULO DEL SITIO IMPORTANTE PARA EL SEO, PARA EL POSICIONAMIENTO-->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&family=Mynerve&display=swap" rel="stylesheet">
+
+
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link href="css/normalize.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Babylonica&display=swap" rel="stylesheet">
+
+
+
+
+
+
+
+    <link rel="preload" href="css/style.css" as="style">
+    <!-- ESTO HARÁ QUE EL NAVEGADOR HAGA UNA CARGA PREVIA DE LAS HOJAS DE ESTILO
+                    PARA TENER UNA MEJOR EXPERIENCIA DE USUARIO -->
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+
+
+
+
+    <!-- LINK, ME DA INFO DE DONDE TENGO ALOJADA LA HOJA DE ESTILOS
+                    REL ME INDICA LA RELACION CON EL DOCUMENTO ACTUAL
+                    
+                    PONEMOS ANTES DEL CIERRE DEL LINK -->
+
+    <!-- BOTON DERECHO Y LIVE SERVER PARA VER LOS CAMBIOS, ARRIBA DEBE PONER EL TITULO DEL SITIO-->
+
+
+</head> <!-- CIERRE ETIQUETA HEAD -->
+
+<body>
+    <!-- ETIQUETA BODY PARA EL CONTENIDO, LO QUE VE EL USUARIO 
+    
+    LINKED EDITING, CON CTRL + SHIFT + P PARA HACER QUE LA ETIQUETA DE APERTURA Y CIERRE
+    SE MODIFIQUEN A LA VEZ-->
+
+
+
+
+
+    <h6>
+        Hola Mundo
+    </h6>
+
+    <section class="FondoAmarillo">
+        <h5>Texto para centrar con FLEXBOX</h5>
+        <h5>Texto A</h5>
+        <h5>Texto B</h5>
+        <h5>Texto C</h5>
+        <!-- CTRL + Ç PARA COMENTAR AUTOMATICAMENTE
+        
+        ALT + SHIT + DOWN PARA DUPLICAR CONTENIDO
+        EN MAC CON COMMAND + SHIFT + DOWN-->
+    </section>
+
+    <section class="FondoRojo">
+        <h5>Texto para centrar con FLEXBOX</h5>
+        <h5>Texto A</h5>
+        <h5>Texto B</h5>
+        <h5>Texto C</h5>
+        <h5>Texto C</h5>
+    </section>
+
+
+    <!--  
+       
+    MUY MUY MUY IMPORTANTE, SER ORDENADOS,
+    ETIQUETA DE APERTURA Y CIERRE EN DISTINTAS LINEAS, PARA VERLO MÁS ORDENADO 
+    alt + SHIFT + f ORGANIZAR EL DOCUmENTO
+    
+    
+    PARA CAMBIAR LAS PREFERENCIAS Y QUE SE CAMBIE LA ETIQUETA DE CIERRE A LA VEZ QUE LA DE APERTURA
+    
+    CODE-PREFERENCIAS-SETTING Y BUSCAMOS LINKED EDITING Y SELECCIONAMOS
+
+    h1, h2,... h6 ES PARA LOS TITULOS
+
+    HTML NO ES UN LENGUAJE MUY ESTRICTO, ES UN POCO FLEXIBLE
+
+
+    **********
+    EJERCICIO 
+        -AÑADIR UN H1, CON EL TITULO CURSO FULLSTACK
+        -UN PARRAFO CON LO QUE ESTAIS APRENDIENTE AHORA MISMO DEL CURSO
+        -Y UN H3 CON LOS OBJETIVOS QUE PRETENDEIS CONSEGUIR
+    **********
+
+    VAMOS A VER UNA HERRAMIENTA QUE VAMOS A UTILIZAR MUCHO A LO LARGO DEL CURSO
+
+    ABRIMOS EL NAVEGADOR Y LE DAMOS A BOTON DERECHO, INSPECCIONAR
+    VEMOS COMO EL CÓDIGO QUE ESTAMOS ESCRIBIENDO ES ACCESIBLE
+
+    DEBEMOS UTILIZAR ETIQUETAS VÁLIDAS, PUES AUNQUE EL CODIGO HTML ES FLEXIBLE Y NO ME MUESTRAR ERROR, GOOGLE ME PENALIZARÁ MUCHO
+
+    MUY IMPORTANTE, A PROGRAMAR SE APRENDE PROGRAMANDO
+
+    NOS VAMOS A BASAR EN LA WEB DE TUCARRERADIGITAL DE ZONA CENTRO
+
+    
+    H1 hasta h6 pPARA DAR INDICACIONES AL NAVEGADOR DE QUE TEXTOS SON MÁS IMPORTANTES
+    -->
+    <header>
+        <nav class="navegacion-principal contenedor"> <!-- DE ESTE MODO PUEDO PONER VARIAS CLASES-->
+            <a href="#">
+                Cursos
+            </a>
+            <a href="#">
+                Sobre Nosotros
+            </a>
+            <a href="#">
+                Infórmate
+            </a>
+        </nav>
+    </header>
+    <main class="Banner">
+
+        <a class="fondoVerde">
+            Hola
+        </a>
+        <p class="fondoVerde">
+            Hola
+        </p>
+
+        <div class="contenedor">
+            <h1>
+                Descubre la formación que te dará la oportunidad de convertirte en un profesional digital
+            </h1>
+
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-camera-selfie" width="100"
+                height="100" viewBox="0 0 24 24" stroke-width="0.5" stroke="#fd0061" fill="none" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                    d="M5 7h1a2 2 0 0 0 2 -2a1 1 0 0 1 1 -1h6a1 1 0 0 1 1 1a2 2 0 0 0 2 2h1a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9a2 2 0 0 1 2 -2" />
+                <path d="M9.5 15a3.5 3.5 0 0 0 5 0" />
+                <line x1="15" y1="11" x2="15.01" y2="11" />
+                <line x1="9" y1="11" x2="9.01" y2="11" />
+            </svg>
+        </div>
+
+
+    </main>
+
+    <section>
+        <h3 class="Mando">
+            Cursos
+        </h3>
+
+        <h2>
+            Cambia tu futuro
+        </h2>
+    </section>
+
+
+    <section>
+        <h2 class="Mando">
+            Marketing Digital
+        </h2>
+
+        <h2>
+            Programación de videojuegos, diseño 3d y realidad virtual
+        </h2>
+
+        <h2>
+            Programación web Full Stack
+        </h2>
+    </section>
+
+
+    <section>
+        <h3>
+            ¿Te interesa algún otro curso en tu ciudad?
+        </h3>
+    </section>
+
+
+    <section class="Ej5">
+
+        <h3>
+            ¿Para quién son estos cursos?
+        </h3>
+
+        <h3>
+            Si quieres dar un giro a tu carrera profesional y formarte en profesiones digitales con futuro, este es tu
+            lugar.
+        </h3>
+
+        <p>
+            Cuando eliges un curso en Tu Carrera Digital, estás dando el paso definitivo hacia las profesiones con más
+            demanda del momento, como Marketing Digital, Desarrollo Web Full Stack y Programación de Videojuegos, Diseño
+            3D y Realidad Virtual. Nosotros te ofrecemos formación con docentes expertos y contenidos alineados a las
+            necesidades de las empresas. Queremos que saques el máximo partido a estos cursos y que potencies tus
+            posibilidades de encontrar un empleo.
+        </p>
+
+        <h4>
+            Para participar necesitas estar inscrito en Garantía Juvenil
+        </h4>
+
+        <p>
+            Descárgate esta infografía en la que te mostramos cómo descargar tu certificado de Garantía Juvenil:
+        </p>
+
+    </section>
+
+    <section>
+        <h2>
+            Localizaciones
+        </h2>
+
+        <h3>
+            Madrid
+        </h3>
+        <p>
+            Avenida Manoteras 32 28050, Madrid, Madrid
+        </p>
+
+        <h3>
+            Pozuelo de Alarcón
+        </h3>
+        <p>
+            Ubicación
+        </p>
+
+        <h3>
+            Madrid
+        </h3>
+        <p>
+            Ubicación
+        </p>
+
+        <h3>
+            Carbajosa de la Sagrada
+        </h3>
+        <p>
+            Ubicación
+        </p>
+
+        <h3>
+            Alcobendas y la Moraleja
+        </h3>
+        <p>
+            Ubicación
+        </p>
+
+    </section>
+
+    <section>
+        <h3>
+            Contactar
+        </h3>
+
+        <h2>
+            ¿Tienes dudas? Habla con nosotros:
+        </h2>
+
+        <h6> MENSAJE DE PRUEBA</h6>
+
+        <img src="img/banner.png">
+
+        <a href="#">Enlace</a>
+
+    </section>
+
+
+    <!-- 
+        H1 UNA VEZ POR ARCHIVO, PARA INDICAR AL NAVEGADOR EL TEXTO CON MAYOR IMPORTANCIA, SI  TENEMOS
+        VARIOS H1 EL NAVEGADOR NO ME VA A DAR FALLO, PERO PENALIZARÁ EN EL SEO. CON EL RESTO DE H2,H3...
+        NO HAY PROBLEMA POR USARLO LAS VECES QUE NECESITEMOS
+
+
+        EL TAMAÑO LO VAMOS A PODER CAMBIAR DESPUÉS CON CSS, PERO ES IMPORTANTE TENERLO CLARO PARA EL SEO
+        PREFERIBLE ESCRIBIR EN MINUSCULAS, DESPUES CON EL CSS LAS PONEMOS EN MAYUS
+        
+        ***********
+        EJERCICIO, 
+        INSPECCIONAR LA WEB DE TU CARRERA DIGITAL Y PONER TODOS EL CONTENIDO TIPO TEXTO, P, H1...H6
+        ***********
+
+
+
+        CUANDO TRABAJAMOS PARA ESTRUCTURAR UNA WEB Y NO TENEMOS AUN EL CONTENIDO,
+        PODEMOS BUSCAR EN LA WEB LOREN IPSUM Y COPIAR CONTENIDO LIBRE DE AUTORIA QUE 
+        NOS SIRVA DE BASE PARA EL DESARROLLO
+
+
+        - ESTRUCTURAR CONTENIDO EN HTML
+
+        PONER DIAPOSITIVA 02 ESTRUCTURA CONTENIDO
+
+        
+        VAMOS A VER COMO SE ESTRUCTURA EL CODIGO
+        ESTRUCTURAR ES LO MISMO QUE AGRUPAR EL CONTENIDO
+
+        PARA LA PARTE SUPERIOR UTILIZAMOS EL <HEADER>
+        PARA LA PARTE INFERIOR EL <FOOTER>
+        PARA EL MENU DE NAVEGACIÓN UTILIZAMOS LA ETIQUETA <NAV>
+        CONTENIDO PRINCIPAL EN LA ETIQUETA <MAIN>
+        PARA LAS SECCIONES UTILIZAREMOS <SECTION> UTILIZAREMOS POR CADA SECCIÓN UN UNICO HX, COMO CONSEJO, PARA SEPARAR SECCIONES POR IMPORTANCIA DE CONTENIDO
+        <ARTICLE> PARA LAS NOTICIAS NORMALMENTE EN LOS BLOGS
+        BARRA LATERAL COMO <ASIDE>
+        UTILIZAREMOS <DIV> CUANDO NO PODAMOS UTILIZAR NINGUNO DE LOS ANTERIORES
+        <FORM> PARA FORMULARIOS
+
+        NORMALMENTE EL HEADER Y EL FOOTER SE SUELE REPETIR EN TODAS LAS PAGINAS
+
+        SEPARAR LAS DISTINTAS SECCIONES DE UNA PÁGINA
+
+        NORMALMENTE SIEMPRE QUE HAY UN HEADING, QUE ES CONTENIDO IMPORTANTE, HAY UN INICIO DE SECCION.
+        CUANDO TENEMOS UN H1, ESA SECCION SE CONVIERTE EN UN MAIN
+        PODEMOS TENER SECCIONES DENTRO DE SECCIONES
+
+        
+        ***********
+        EJERCICIO: 
+        PONER SECCIONES AL CONTENIDO QUE HEMOS PUESTO ANTES
+        ***********
+
+        ETIQUETA NAV, LA UTILIZAREMOS EN EL MENU DE NAVEGACION
+        VAMOS A CREAR DISTINTAS PAGINAS HTML PARA COPIAR LOS ENLACES. ZONA NORTE, ZONA SUR... CURSOS, INFORMATE... 
+        ATRIBUTOS, SIEMPRE QUE ESTEN DENTRO DE LA ETIQUETA DE APERTURA
+
+        LOS ENLACES SE IDENTIFICAN CON LA ETIQUETA <a href="url">Texto del enlace</a>
+        SI AUN NO TENEMOS EL ENLACE, PODEMOS PONER # PARA SIMULAR EL ENLACE
+
+        BOTONES, SON ENLACES
+        USO ETIQUETA <a href="url">Boton</a>
+
+        ***********
+        EJERCICIO: 
+        CREAR TODOS LOS BOTONES
+        ***********
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        *************
+        EJERCICIO
+        TERMINAR DE PONER TODOS LOS BOTONES QUE APARECEN
+        *************
+
+        ICONOS E IMÁGENES
+        
+            <img src="img/nombre.jpg">
+            LE TENGO QUE DAR LA RUTA DE DONDE TENGO ALOJADA LA IMAGEN, PARA ELLO HAY QUE TENER
+            EN CUENTA EL DIRECTORIO AL QUE ME ESTOY REFIRIENDO, LO QUE VIMOS AYER
+            NORMALMENTE SE GUARDA TODO EN UNA CARPETA img
+
+            LAS IMÁGENES DE FONDO SE PONEN DESDE EL CSS, LO VEREMOS MÁS ADELANTE
+
+            USAREMOS TABLER ICONS,HERO ICONS COPIAMOS LA URL Y LA PEGAMOS DIRECTAMENTE
+
+        
+        ***********
+        EJERCICIO: 
+        DECARGAR TODAS LAS IMÁGENES Y USAR ICONOS
+        ***********
+
+        FORMULARIO DE CONTACTO
+        AUNQUE NO APAREZCA EN LA PÁGINA LO VAMOS A PONER PARA EXPLICARLO
+        
+            <form>
+
+                <fieldset> AGRUPAR TODOS LOS ELEMENTOS DEL FORMULARIO
+
+                    <legend> Contactanos llenando todos los campos </legend> DESCRIBIR EL FORMULARIO
+
+                    <div> PARA AGRUPAR LOS DIFERENTES INPUTS
+
+                        <div>
+                            <label> Nombre </label>    ETIQUETA
+                            <input type="Text" placeholder="Tu Nombre"> CAMPO DONDE SE ESCRIBEM PLACEHOLDER, LA INDICACIÓN
+                        </div>
+
+                        <div>
+                            <label> Telefono </label>
+                            <input type="tel" placeholder="Tu Telefono">
+                        </div>
+
+                        <div>
+                            <label> Edad </label>
+                            <input type="number" placeholder="Tu Edad">
+                        </div>
+
+                        <div>
+                            <label> Correo </label>
+                            <input type="email" placeholder="Tu Email">
+                        </div>
+
+                        <div>
+                            <label> Mensaje </label>
+                            <textarea></textarea>
+                        </div>
+
+
+                    </div>
+
+                    <div>
+                        <input class="botonFormulario" type="submit" value="Enviar">
+                    </div>
+
+
+
+                </fieldset>
+
+
+            </form>
+
+        -->
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
