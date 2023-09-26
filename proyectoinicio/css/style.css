@@ -1,3 +1,10 @@
+:root{
+    --colorPrincipal:#F76666;
+    --colorSecundario:#02052F;
+    --fuentePrincipal: 'Open Sans', sans-serif;
+}
+
+
 html
     {
     font-size: 62.5%;
@@ -6,6 +13,8 @@ html
 body
     {
     font-size: 16px;
+    /* background-color: var(--colorPrincipal); */
+    font-family: var(--fuentePrincipal);
     }
 
 
@@ -129,3 +138,8 @@ h1{
     font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
 } 
+/* 
+.ejercicioColor{
+    color: var(--colorPrincipal);
+} */
+

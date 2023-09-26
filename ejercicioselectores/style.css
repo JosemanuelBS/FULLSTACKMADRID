@@ -1,0 +1,57 @@
+/* SELECTOR DE ELEMENTO */
+h1 {
+    color: green;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+}
+
+/* SELECTOR DE CLASE */
+.seccion2 {
+    color: red;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 5rem;
+}
+
+/* SELECTOR DE ID  */
+#seccion3 {
+    color: blue;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+
+/* SELECTOR DE ATRIBUTO  */
+
+[alt="empleate"] {
+    margin: 500px;
+}
+
+/* SELECTOR DE CADENA DESCENDENTE  */
+.seccion5 h4 {
+    color: pink;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* SELECTOR DE TODOS LOS HIJOS  */
+.Seccion6>h5 {
+    color: yellow;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 4rem;
+}
+
+/* SELECTOR MULTIPLE  */
+
+.seccion7 h3,
+.seccion7 h6 {
+
+    color: purple;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+
+}
