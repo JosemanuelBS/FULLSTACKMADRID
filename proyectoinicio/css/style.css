@@ -2,6 +2,7 @@
     --colorPrincipal:#F76666;
     --colorSecundario:#02052F;
     --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteBotones: "DinBold", sans-serif;
 }
 
 
@@ -163,8 +164,36 @@ h6{
 
 .fondoMain{
     background-image: url(../img/11641893944_banner_zona_centro.png);
+    background-size: cover;
+    background-position: top left;
+    padding: 80px 0 180px 0;
 }
 
+.margenDerecho{
+    margin-right: 33%;
+}
+
+h1{
+    background-color: rgba(248,102,102,0.65);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    font-size: 4.5rem;
+    margin-bottom: 10px;
+    padding: 35px;
+    color: white;
+}
+
+.fondoMain a{
+    background-color: black;
+    color: white;
+    border: 2px solid black;
+    padding: 24px 94px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--fuenteBotones);
+    font-weight: 700;
+    font-size: 1.4rem;
+}
 
 
 /* ESTILOS PARA LA SECCION DE IMAGEN DE CORPORACIONES  */
@@ -205,4 +234,14 @@ h6{
 CREAR UNA SECCION CON UN DIV CON UNA ALTURA DE 300PX Y FONDO AMARILLO COMPLETAMENTE
 
 CREAR UNA SECCION CON UN DIV CON UNA ALTURA DE 100PX Y CON LA CLASE CONTENEDOR 
-FONDO AZUL. */
+FONDO AZUL. (MIRAR PIZARRA)*/
+
+/* .fondo-amarillo{
+    height: 300px;
+    background-color: yellow;
+}
+
+.fondo-azul{
+    height: 100px;
+    background-color: blue;
+} */
