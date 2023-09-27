@@ -128,7 +128,7 @@ h6{
 }
 */
 
-h1{
+/* h1{
     color: white;
     font-size: 4.5rem;
     background-color: rgba(248, 102, 102, 0.65);
@@ -137,9 +137,72 @@ h1{
     margin-bottom: 10px;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.2;
-} 
+}  */
 /* 
 .ejercicioColor{
     color: var(--colorPrincipal);
 } */
 
+/* ESTILOS GENERICOS  */
+
+.contenedor{
+    max-width: 88%;
+
+    /* margin-top:0;
+    margin-right: auto;
+    margin-bottom: 0;
+    margin-left: auto; */
+
+    /* margin: 0 auto 0 auto; */
+
+    margin: 0 auto;
+}
+
+
+/* ESTILOS PARA EL MAIN  */
+
+.fondoMain{
+    background-image: url(../img/11641893944_banner_zona_centro.png);
+}
+
+
+
+/* ESTILOS PARA LA SECCION DE IMAGEN DE CORPORACIONES  */
+
+
+/* ESTILOS SECCION CURSOS  */
+
+
+/* ESTILOS SECCION PIDENOSLO  */
+
+
+/* ESTILOS SECCION VIDEO  */
+
+
+/* ESTILOS SECCION PARA QUIEN SON ESTOS CURSOS  */
+
+
+/* ESTILOS LOCALIZACIONES  */
+
+.localizaciones{
+    background-color: black;
+    color: white;
+}
+
+/* ESTILOS CONTACTAR  */
+
+
+/* ESTILOS FOOTER  */
+
+
+/* ESTILOS HEADER  */
+
+
+
+
+/* EJERCICIO
+
+CREAR UNA SECCION CON UN DIV CON UNA ALTURA DE 300PX Y FONDO AMARILLO COMPLETAMENTE
+
+CREAR UNA SECCION CON UN DIV CON UNA ALTURA DE 100PX Y CON LA CLASE CONTENEDOR 
+FONDO AZUL. */
