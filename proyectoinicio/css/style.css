@@ -193,13 +193,56 @@ h1{
     font-family: var(--fuenteBotones);
     font-weight: 700;
     font-size: 1.4rem;
+
+   
+}
+
+.flexMain{
+    display: flex;
+    flex-direction: row; /*POR DEFECTO ES ROW*/
+    justify-content: space-between;
 }
 
 
 /* ESTILOS PARA LA SECCION DE IMAGEN DE CORPORACIONES  */
 
+.logos{
+
+background-color: white;
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+padding-top: 20px;
+padding-bottom: 20px;
+margin-top: -120px;
+border-radius: 12px;
+}
 
 /* ESTILOS SECCION CURSOS  */
+
+.seccionCursos h3{
+    text-align: center;
+    color: var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    margin: 40px 0px;
+}
+
+.seccionCursos>h2{
+    margin-bottom: 72px;
+    text-align: center;
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+
+}
+
+
 
 
 /* ESTILOS SECCION PIDENOSLO  */
@@ -245,3 +288,22 @@ FONDO AZUL. (MIRAR PIZARRA)*/
     height: 100px;
     background-color: blue;
 } */
+
+
+/* .displayInline a{
+    background-color: red;
+    display: block;
+}
+
+.displayBlock p{
+    background-color: yellow;
+    display: inline;
+} */
+
+
+.ejercicioBoxModel{
+    height: 1000px;
+    padding: 100px;
+    border: 10px solid black;
+    margin: 200px;
+}

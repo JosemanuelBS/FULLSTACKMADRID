@@ -95,12 +95,14 @@
         <div class="contenedor">
 
             <div class="margenDerecho">
-                <h1 >Descubre la formación que te dará la oportunidad de convertirte en un
+                <h1>Descubre la formación que te dará la oportunidad de convertirte en un
                     profesional
                     digital</h1>
 
-                <img src="./img/ico-centro.png">
-                <a href="https://www.tucarreradigital.es/zona-centro#cursos">Ver Cursos</a>
+                <div class="flexMain">
+                    <img src="./img/ico-centro.png">
+                    <a href="https://www.tucarreradigital.es/zona-centro#cursos">Ver Cursos ></a>
+                </div>
             </div>
 
         </div>
@@ -115,21 +117,35 @@
 
 
 
+    <section class="logos contenedor">
+        <img src="./img/Logos-oficiales.png" alt="Logos oficiales tu carrera digital">
+        <img src="./img/Logo-Adecco.png">
+    </section>
 
-    <img src="./img/Logos-oficiales.png" alt="Logos oficiales tu carrera digital">
 
-    <section>
+
+
+
+
+    <section class="seccionCursos contenedor">
         <h3>Cursos</h3>
+        <h2>Cambia tu futuro</h2>
         <a href="#">Ver Todo</a>
         <a href="#">Madrid</a>
-        <h2 class="ejercicioColor">Marketing Digital</h2>
-        <a href="https://www.tucarreradigital.es/zona-centro/curso-marketing-digital#cursos">Inscribirme</a>
-        <h2 class="ejercicioColor">PROGRAMACIÓN DE VIDEOJUEGOS, DISEÑO 3D Y REALIDAD VIRTUAL</h2>
-        <a
-            href="https://www.tucarreradigital.es/zona-centro/curso-programacion-de-videojuegos-diseno-3d-y-realidad-virtual#cursos">Inscribirme</a>
-        <h2 class="ejercicioColor">PROGRAMACIÓN WEB FULL STACK</h2>
-        <a href="https://www.tucarreradigital.es/zona-centro/curso-programacion-web-full-stack#cursos">Inscribirme</a>
+
+        <div>
+            <h2>Marketing Digital</h2>
+            <a href="https://www.tucarreradigital.es/zona-centro/curso-marketing-digital#cursos">Inscribirme</a>
+            <h2>PROGRAMACIÓN DE VIDEOJUEGOS, DISEÑO 3D Y REALIDAD VIRTUAL</h2>
+            <a href="https://www.tucarreradigital.es/zona-centro/curso-marketing-digital#cursos">Inscribirme</a>
+        </div>
+
+
     </section>
+
+
+
+
 
     <section>
         <h3>¿TE INTERESA ALGÚN OTRO CURSO EN TU CIUDAD?</h3>
@@ -249,6 +265,19 @@
 
 
 
+    <!-- <section class="displayInline">
+        <a>HOLA</a>
+        <a>HOLA</a>
+        <a>HOLA</a>
+        <a>HOLA</a>
+    </section>
+
+    <section class="displayBlock">
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+        <p>hola</p>
+    </section> -->
 
 
 
@@ -260,116 +289,6 @@
 
 
 
-
-
-
-
-
-
-
-
-    <!--
-*******************
-*******************
-INICIO CLASE 2023/09/25
-*******************
-*******************
-
-REPASO DÍA ANTERIOR
-
-
-    ESTRUCTURA DE HTML, AUTOMATICAMENTE CON !
-        HEAD
-        BODY
-
-    ETIQUETAS DE CONTENIDO
-        P
-        H1,H2...H6
-        A
-        img
-
-
-
-    ETIQUETAS DE ESTRUCTURA
-        PARA LA PARTE SUPERIOR UTILIZAMOS EL <HEADER>
-        PARA LA PARTE INFERIOR EL <FOOTER>
-        PARA EL MENU DE NAVEGACIÓN UTILIZAMOS LA ETIQUETA <NAV>
-        CONTENIDO PRINCIPAL EN LA ETIQUETA <MAIN>
-        PARA LAS SECCIONES UTILIZAREMOS <SECTION> UTILIZAREMOS POR CADA SECCIÓN UN UNICO HX, COMO CONSEJO, PARA SEPARAR SECCIONES POR IMPORTANCIA DE CONTENIDO
-        <ARTICLE> PARA LAS NOTICIAS NORMALMENTE EN LOS BLOGS
-        BARRA LATERAL COMO <ASIDE>
-        UTILIZAREMOS <DIV> CUANDO NO PODAMOS UTILIZAR NINGUNO DE LOS ANTERIORES
-        <FORM> PARA FORMULARIOS
-FIN DEL REPASO
-
-
-
-!!!!!!!!!!!!!!!!!!!
-EJERCICIO
-MONTAR EL HEADER EN ESTE PROYECTO
-
-
-
-
-
-
-
-COMIENZO DE CSS
-
-!!!!!!!!!!!!!!!
-PONER DIAPOSITIVA 03 ROL DE CSS
-
-    p {                 SELECTOR DE ETIQUETAS
-        color:blue;     LLAVE APERTURA Y CIERRE
-                        PROPIEDADES, TANTAS COMO QUERAMOS
-                        VALOR DE LA PROPIEDAD
-    }
-
-    HOJAS DE ESTILOS EN CASCADA, DE ARRIBA ABAJO, APLICARÁ EL ÚLTIMO
-    ESTO SE LLAMA ESPECIFICIDAD, LO VEREMOS MÁS ADELANTE
-
-
-PODEMOS PONER LOS ESTILOS DE VARIAS FORMAS, PERO ES MÁS RECOMENDABLE
-CREAR UNA HOJA DE ESTILOS A PARTE
-
-    INTERNO EN EL HTML DENTRO DEL HEAD
-        <style>
-            h1 {
-                color:red; PROPIEDAD Y VALOR
-                background-color: yelow;
-                MOSTRAR PROPIEDAD COLORE, VER COMO APARECE TACHADO PUES ES ERRONEO.
-            }
-        </style>
-    
-    HOJA DE ESTILOS A PARTE
-
-        CREAMOS UNA CARPETA DE css
-        DENTRO CREAREMOS UNA HOJA DE ESTILOS NUEVA LLAMADA STYLE.CSS
-        EN LA CUAL ALOJAREMOS TODOS NUESTROS ESTILOS
-
-        EL OBJETIVO DE UNA HOJA DE ESTILOS EXTERNA ES CENTRALIZAR TODO
-        Y TENER UNICAMENTE QUE HACER LOS CAMBIOS UNA VEZ, PONER
-        EJEMPLO DE PAGINA INICIO Y CONTACTO
-
-        COMO ENLAZAMOS LA HOJA DE ESTILOS CON EL HTML?
-            LE DAMOS INDICACIONES AL NAVEGADOR
-            <link href="css/styles.css" rel="stylesheet">
-
-            LINK, ME DA INFO DE DONDE TENGO ALOJADA LA HOJA DE ESTILOS
-            REL ME INDICA LA RELACION CON EL DOCUMENTO ACTUAL
-            
-            PONEMOS ANTES DEL LINK
-            <link rel="preload" href="css/styles.css" as="style">
-            ESTO HARÁ QUE EL NAVEGADOR HAGA UNA CARGA PREVIA DE LAS HOJAS DE ESTILO
-            PARA TENER UNA MEJOR EXPERIENCIA DE USUARIO
-        
-    DONDE PODEMOS VER LA HOJA DE ESTILOS EN EL NAVEGADOR?
-        
-        EN EL INSPECTOR WEB, INSPECCIONAR, ESTILOS
-
-    NOS CAMBIAMOS A LA HOJA DE ESTILOS
-
--->
 
 
 
