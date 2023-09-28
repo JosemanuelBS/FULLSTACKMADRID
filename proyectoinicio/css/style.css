@@ -242,8 +242,96 @@ border-radius: 12px;
 
 }
 
+.botonesCursos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 105px;
+}
 
+.botonVerTodo{
+    background-color: var(--colorPrincipal);
+    color: white;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--colorPrincipal);
+}
+.botonMadrid{
+    background-color: white;
+    color: var(--colorSecundario);
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 600;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    border: 1px solid var(--colorPrincipal);
+}
 
+.cursosOfertados{
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.cursosOfertados div{
+    justify-content: space-between;
+    max-width: 50%;
+    flex: 2;
+    padding: 40px 60px;
+}
+
+.marketing{
+    background-image: url(../img/Curso-marketing-digital-centro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-right: 15px;
+}
+
+.videojuegos{
+    background-image: url(../img/Curso-programacion-videojuegos-centro.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-left: 15px;
+}
+
+.cursosOfertados div h2{
+
+    color: white;
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 22px;
+
+}
+
+.cursosOfertados a{
+    color: var(--colorPrincipal);
+    font-size: 1.4rem;
+    background-color: white;
+    border: 2px solid white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 20px 60px;
+}
+
+/* .ejercicioMax{
+    background-color: red;
+    max-width: 800px;
+    height: 200px;
+} */
 
 /* ESTILOS SECCION PIDENOSLO  */
 
@@ -301,9 +389,9 @@ FONDO AZUL. (MIRAR PIZARRA)*/
 } */
 
 
-.ejercicioBoxModel{
+/* .ejercicioBoxModel{
     height: 1000px;
     padding: 100px;
     border: 10px solid black;
     margin: 200px;
-}
+} */
