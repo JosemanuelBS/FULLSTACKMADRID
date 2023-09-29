@@ -445,3 +445,24 @@ FONDO AZUL. (MIRAR PIZARRA)*/
     border: 10px solid black;
     margin: 200px;
 } */
+
+.ejercicioFlexRow{
+    height: 300px;
+    width: 300px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: end;
+}
+
+
+.ejercicioFlexColumn{
+    height: 300px;
+    width: 300px;
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: end;
+}
