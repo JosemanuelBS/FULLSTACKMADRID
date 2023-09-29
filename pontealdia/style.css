@@ -1,0 +1,82 @@
+/* EJERCICIO CADENA DESCENDE Y TODOS LOS HIJOS  */
+
+.CADENADESCENDENTE h2{
+    background-color: blue;
+    height: 100px;
+}
+
+
+.todosloshijos>div>h2{
+    background-color: red;
+    height: 100px;
+}
+
+
+/* EJERCICIO MARGIN Y PADDING  */
+
+.mar{
+    height: 200px;
+    background-color: yellow;
+    margin: 50px;
+}
+
+.pad{
+    height: 200px;
+    background-color: green;
+    padding: 50px;
+}
+
+
+
+/* EJERCICIO DISPLAYS INLINE Y BLOCK  */
+
+.seccionDisplays>p{
+    background-color: orange;
+}
+.seccionDisplays a{
+    background-color: blue;
+}
+.seccionDisplays h1{
+    background-color: red;
+}
+.seccionDisplays h3{
+    background-color: yellow;
+}
+.seccionDisplays h6{
+    background-color: green;
+}
+.seccionDisplays div{
+    background-color: black;
+}
+
+
+
+.seccionDisplaysCambio>p{
+    background-color: orange;
+    display: inline;
+}
+.seccionDisplaysCambio a{
+    background-color: blue;
+    display: block;
+}
+.seccionDisplaysCambio h1{
+    background-color: red;
+    display: inline;
+}
+.seccionDisplaysCambio h3{
+    background-color: yellow;
+    display: inline;
+}
+.seccionDisplaysCambio h6{
+    background-color: green;
+    display: inline;
+}
+.seccionDisplaysCambio div{
+    background-color: black;
+    display: inline;
+}
+.seccionDisplaysCambio>div>p{
+    display: inline;
+}
+
+

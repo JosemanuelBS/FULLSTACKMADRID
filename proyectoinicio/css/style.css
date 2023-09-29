@@ -1,25 +1,23 @@
-:root{
-    --colorPrincipal:#F76666;
-    --colorSecundario:#02052F;
+:root {
+    --colorPrincipal: #F76666;
+    --colorSecundario: #02052F;
     --fuentePrincipal: 'Open Sans', sans-serif;
     --fuenteBotones: "DinBold", sans-serif;
 }
 
 
-html
-    {
+html {
     font-size: 62.5%;
-    }
-    
-body
-    {
+}
+
+body {
     font-size: 16px;
     /* background-color: var(--colorPrincipal); */
     font-family: var(--fuentePrincipal);
-    }
+}
 
 
-    /* ESTO ME PERMITE CONSEGUIR 10PX = 1REM 
+/* ESTO ME PERMITE CONSEGUIR 10PX = 1REM 
     SIN ESO 16PX = 1REM*/
 /* 
 h1{
@@ -146,7 +144,7 @@ h6{
 
 /* ESTILOS GENERICOS  */
 
-.contenedor{
+.contenedor {
     max-width: 88%;
 
     /* margin-top:0;
@@ -162,19 +160,19 @@ h6{
 
 /* ESTILOS PARA EL MAIN  */
 
-.fondoMain{
+.fondoMain {
     background-image: url(../img/11641893944_banner_zona_centro.png);
     background-size: cover;
     background-position: top left;
     padding: 80px 0 180px 0;
 }
 
-.margenDerecho{
+.margenDerecho {
     margin-right: 33%;
 }
 
-h1{
-    background-color: rgba(248,102,102,0.65);
+h1 {
+    background-color: rgba(248, 102, 102, 0.65);
     font-family: var(--fuentePrincipal);
     font-weight: 800;
     font-size: 4.5rem;
@@ -183,7 +181,7 @@ h1{
     color: white;
 }
 
-.fondoMain a{
+.fondoMain a {
     background-color: black;
     color: white;
     border: 2px solid black;
@@ -194,34 +192,35 @@ h1{
     font-weight: 700;
     font-size: 1.4rem;
 
-   
+
 }
 
-.flexMain{
+.flexMain {
     display: flex;
-    flex-direction: row; /*POR DEFECTO ES ROW*/
+    flex-direction: row;
+    /*POR DEFECTO ES ROW*/
     justify-content: space-between;
 }
 
 
 /* ESTILOS PARA LA SECCION DE IMAGEN DE CORPORACIONES  */
 
-.logos{
+.logos {
 
-background-color: white;
-display: flex;
-flex-direction: row;
-justify-content: space-evenly;
-align-items: center;
-padding-top: 20px;
-padding-bottom: 20px;
-margin-top: -120px;
-border-radius: 12px;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: -120px;
+    border-radius: 12px;
 }
 
 /* ESTILOS SECCION CURSOS  */
 
-.seccionCursos h3{
+.seccionCursos h3 {
     text-align: center;
     color: var(--colorPrincipal);
     font-family: var(--fuentePrincipal);
@@ -231,7 +230,7 @@ border-radius: 12px;
     margin: 40px 0px;
 }
 
-.seccionCursos>h2{
+.seccionCursos>h2 {
     margin-bottom: 72px;
     text-align: center;
     color: var(--colorSecundario);
@@ -242,14 +241,14 @@ border-radius: 12px;
 
 }
 
-.botonesCursos{
+.botonesCursos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin-bottom: 105px;
 }
 
-.botonVerTodo{
+.botonVerTodo {
     background-color: var(--colorPrincipal);
     color: white;
     font-family: var(--fuentePrincipal);
@@ -262,7 +261,8 @@ border-radius: 12px;
     margin-left: 0.5rem;
     border: 1px solid var(--colorPrincipal);
 }
-.botonMadrid{
+
+.botonMadrid {
     background-color: white;
     color: var(--colorSecundario);
     font-family: var(--fuentePrincipal);
@@ -276,14 +276,14 @@ border-radius: 12px;
     border: 1px solid var(--colorPrincipal);
 }
 
-.cursosOfertados{
+.cursosOfertados {
     margin-bottom: 120px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.cursosOfertados>div{
+.cursosOfertados>div {
 
     max-width: 50%;
     flex: 2;
@@ -294,7 +294,7 @@ border-radius: 12px;
     min-height: 300px;
 }
 
-.marketing{
+.marketing {
     background-image: url(../img/Curso-marketing-digital-centro.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -302,7 +302,7 @@ border-radius: 12px;
     margin-right: 15px;
 }
 
-.videojuegos{
+.videojuegos {
     background-image: url(../img/Curso-programacion-videojuegos-centro.png);
     background-size: cover;
     background-repeat: no-repeat;
@@ -310,7 +310,7 @@ border-radius: 12px;
     margin-left: 15px;
 }
 
-.cursosOfertados h2{
+.cursosOfertados h2 {
 
     color: white;
     font-size: 2.7rem;
@@ -320,7 +320,7 @@ border-radius: 12px;
 
 }
 
-.cursosOfertados a{
+.cursosOfertados a {
     color: var(--colorPrincipal);
     font-size: 1.4rem;
     background-color: white;
@@ -340,23 +340,26 @@ border-radius: 12px;
 
 /* ESTILOS SECCION PIDENOSLO  */
 
-.pidenoslo{
+.pidenoslo {
     margin-bottom: 150px;
 
 }
-.pidenoslo h3{
+
+.pidenoslo h3 {
     text-align: center;
     color: var(--colorSecundario);
     text-transform: uppercase;
     font-weight: 800;
     margin-bottom: 40px 0;
 }
-.pidenoslo div{
-display: flex;
-flex-direction: row;
-justify-content: center;
+
+.pidenoslo div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
-.pidenoslo a{
+
+.pidenoslo a {
     background-color: var(--colorPrincipal);
     color: white;
     font-family: var(--fuentePrincipal);
@@ -370,7 +373,7 @@ justify-content: center;
 }
 
 
-.pidenoslo a:hover{
+.pidenoslo a:hover {
     background-color: var(--colorSecundario);
     text-decoration: underline;
 }
@@ -387,14 +390,18 @@ justify-content: center;
 
 
 /* ESTILOS SECCION VIDEO  */
-
+.video{
+    justify-content: center;
+    display: flex;
+    margin-bottom: 70px;
+}
 
 /* ESTILOS SECCION PARA QUIEN SON ESTOS CURSOS  */
 
 
 /* ESTILOS LOCALIZACIONES  */
 
-.localizaciones{
+.localizaciones {
     background-color: black;
     color: white;
 }
@@ -446,7 +453,7 @@ FONDO AZUL. (MIRAR PIZARRA)*/
     margin: 200px;
 } */
 
-.ejercicioFlexRow{
+.ejercicioFlexRow {
     height: 300px;
     width: 300px;
     background-color: green;
@@ -457,7 +464,7 @@ FONDO AZUL. (MIRAR PIZARRA)*/
 }
 
 
-.ejercicioFlexColumn{
+.ejercicioFlexColumn {
     height: 300px;
     width: 300px;
     background-color: blue;
