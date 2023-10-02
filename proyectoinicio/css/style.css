@@ -398,15 +398,247 @@ h1 {
 
 /* ESTILOS SECCION PARA QUIEN SON ESTOS CURSOS  */
 
+.seccionParaQuien{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
 
-/* ESTILOS LOCALIZACIONES  */
+.seccionParaQuien>div{
+    flex:1;
+    max-width: 50%;
+}
 
-.localizaciones {
-    background-color: black;
+.seccionParaQuien h3{
+    color:var(--colorPrincipal);
+    font-family: var(--fuentePrincipal);
+    font-weight: 600;
+    font-size: 1.7rem;
+}
+
+.seccionParaQuien h2{
+    font-family: var(--fuentePrincipal);
+    color: var(--colorSecundario);
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.paraQuienIzq{
+    margin-right: 15px;
+}
+
+
+.seccionParaQuien p{
+    font-family: var(--fuentePrincipal);
+    font-size: 1.5rem;
+    font-weight: 200;
+    margin-bottom: 25px;
+    line-height: 1.5;
+    color: var(--colorSecundario);
+}
+
+.seccionParaQuien span{
+    font-weight: 800;
+}
+
+.paraQuienIzq h4{
+    font-family: var(--fuentePrincipal);
+    color: var(--colorSecundario);
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+
+.paraQuienIzq a{
+    color: var(--colorPrincipal);
+    text-transform: uppercase;
+    font-family: var(--fuentePrincipal);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.paraQuienIzq h5{
+    font-family: var(--fuentePrincipal);
+    font-weight:800;
+    font-size: 1.4rem;
+    line-height: 1.5; 
+    color: var(--colorSecundario);
+    margin-bottom: 25px;
+}
+
+.paraQuienIzq .botonInfografia{
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-decoration: none;
+    padding: 20px 40px;
+    display: inline-block;
+
+}
+
+.paraQuienDer{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    margin-top: 60px;
+}
+
+.paraQuienDerSup{
+    background-color: var(--colorPrincipal);
+    padding: 60px 30px;
+}
+
+.paraQuienDerSup h5{
+    font-family: var(--fuentePrincipal);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 10px;
     color: white;
 }
 
+.paraQuienDerSup .destacarAzul{
+    color: var(--colorSecundario);
+}
+
+.paraQuienDerSup span{
+    color: black;
+}
+.paraQuienDerInf{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -60px;
+    margin-right: 40px;
+}
+.paraQuienDerInf img{
+    margin-top: 10px;
+    height: 40px;
+    width: 40px;
+
+}
+.paraQuienDerInf h4{
+    font-family: var(--fuentePrincipal);
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    padding: 40px 30px;
+    text-align:left;
+    width: 250px;
+}
+.paraQuienDerInf h4 span{
+    color: var(--colorPrincipal);
+}
+
+
+
+
+
+
+
+/* ESTILOS LOCALIZACIONES  */
+
+/* .localizaciones {
+    background-color: black;
+    color: white;
+} */
+
+.cajas-localizaciones{
+    background-color: black;
+    padding: 100px 0;
+}
+
+.cajas-localizaciones .contenedor{
+    display: flex;
+}
+
+.cajas-localizaciones .contenedor div{
+    width: 25%;
+    padding: 24px 10px;
+    color: white;
+    margin: 0;
+}
+
+.cajas-localizaciones h2{
+    color: white;
+    font-size: 27px;
+    font-weight: 700px;
+    font-family: var(--fuenteBotones);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+
+
+}
+
+
+
+
+
 /* ESTILOS CONTACTAR  */
+
+.Contacto{
+    background-color: var(--colorPrincipal);
+    padding-top: 90px;
+    padding-bottom: 130px;
+}
+.Contacto .contenedor>h3{
+    color: white;
+    font-size: 17px;
+    margin-bottom: 22px;
+    font-weight: 300;
+    font-family: var(--fuentePrincipal);
+    text-transform: uppercase;
+}
+.Contacto .contenedor>h2{
+    color: white;
+    margin-bottom: 22px;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.ContactoCuadros{
+    display: flex;
+    flex-direction: row;
+}
+
+.ContactoCuadros img{
+    margin-right: 15px;
+}
+.cuadro1{
+    display: flex;
+    background-color: white;
+    margin-right: 15px;
+    border-radius: 0.55rem;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+.cuadro2{
+    background-color: white;
+    margin-left: 15px;
+    border-radius: 0.55rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex: 1;
+    max-width: 50%;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ESTILOS FOOTER  */
@@ -473,3 +705,4 @@ FONDO AZUL. (MIRAR PIZARRA)*/
     justify-content: flex-start;
     align-items: end;
 }
+
