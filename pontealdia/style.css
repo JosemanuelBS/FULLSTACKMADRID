@@ -69,7 +69,7 @@
 }
 .seccionDisplaysCambio h6{
     background-color: green;
-    display: inline;
+    display: inline; 
 }
 .seccionDisplaysCambio div{
     background-color: black;
@@ -77,6 +77,68 @@
 }
 .seccionDisplaysCambio>div>p{
     display: inline;
+}
+
+/* EJERCICIO 1 */
+.porcentajes{
+    display: flex;
+}
+.seccionP1{
+    width: 20%;
+    border:2px solid black;
+    text-align: center;
+}
+.seccionP2{
+    width: 30%;
+    border:2px solid black;
+    text-align: center;
+}
+.seccionP3{
+    width: 50%;
+    border:2px solid black;
+    text-align: center;
+}
+
+/* EJERCICIO 2 */
+
+.altura {
+    display: flex;
+    flex-direction: column;
+}
+
+.altura1 {
+    height: 100px;
+    background-color: blue;
+}
+
+.altura2 {
+    height: 200px;
+    background-color: green;
+}
+
+.ejemplo3{
+    display: flex;
+}
+
+.primerdiv{
+    width: 40%;
+    background-color: cadetblue;
+}
+
+.segundodiv{
+    display: flex;
+    width: 60%;
+    background-color: hotpink;
+}
+
+.segundodiv .parrafo1{
+    width: 30%;
+    background-color: bisque;
+}
+
+.segundodiv .parrafo2{
+    width: 70%;
+    background-color: brown;
 }
 
 

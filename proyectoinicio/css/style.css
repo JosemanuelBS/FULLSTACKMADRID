@@ -643,6 +643,44 @@ h1 {
 
 /* ESTILOS FOOTER  */
 
+.seccionFooter{
+    display:flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.enlacesFooter{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid black;
+}
+
+.enlacesFooter a{
+    font-family: var(--fuentePrincipal);
+    color:var(--colorSecundario);
+    font-size: 1.7rem;
+    font-weight: 800;
+    margin-right:80px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.paginasLegales{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+}
+
+.paginasLegales a{
+    font-family: var(--fuentePrincipal);
+    color:var(--colorSecundario);
+    font-size: 1.7rem;
+    margin-right:80px;
+    line-height: 1.2;
+
+}
+
+
 
 /* ESTILOS HEADER  */
 
@@ -684,7 +722,7 @@ FONDO AZUL. (MIRAR PIZARRA)*/
     border: 10px solid black;
     margin: 200px;
 } */
-
+/* 
 .ejercicioFlexRow {
     height: 300px;
     width: 300px;
@@ -704,5 +742,5 @@ FONDO AZUL. (MIRAR PIZARRA)*/
     flex-direction: column;
     justify-content: flex-start;
     align-items: end;
-}
+} */
 
