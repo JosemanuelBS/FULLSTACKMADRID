@@ -185,3 +185,32 @@ COLOR FONDO AMARILLO
 
 MAYOR DE 1131PX 
 COLOR FONDO MARRON */
+
+/* EJERCICO CON RELATIVE Y ABSOLUTE  */
+
+.ejercicioAR{
+    height: 500px;
+    /* background-image: linear-gradient(to right,red 50%, blue 55%, green 90%); */
+/* 
+    background: rgba(147,206,222,1);
+background: -moz-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(121,191,211,1) 36%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 59%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(36%, rgba(121,191,211,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(59%, rgba(73,165,191,1)));
+background: -webkit-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(121,191,211,1) 36%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 59%);
+background: -o-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(121,191,211,1) 36%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 59%);
+background: -ms-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(121,191,211,1) 36%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 59%);
+background: linear-gradient(135deg, rgba(147,206,222,1) 0%, rgba(121,191,211,1) 36%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 59%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+ */
+
+    position: relative;
+}
+
+.ejercicioAR div{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+    box-shadow: 51px 33px 76px -15px rgba(0,0,0,0.9);
+}
