@@ -181,7 +181,7 @@ h6{
 
 @media (max-width:768px) {
     .contenedor{
-        max-width: 0%;
+        max-width: 90%;
         margin: 0 auto;
     }
 }
@@ -198,6 +198,12 @@ h6{
     margin-right: 33%;
 }
 
+@media (max-width:1140px) {
+    .margenDerecho{
+        margin-right: 0;
+    }
+}
+
 h1 {
     background-color: rgba(248, 102, 102, 0.65);
     font-family: var(--fuentePrincipal);
@@ -208,7 +214,7 @@ h1 {
     color: white;
 }
 
-.fondoMain a {
+    .fondoMain a {
     background-color: black;
     color: white;
     border: 2px solid black;
@@ -218,8 +224,12 @@ h1 {
     font-family: var(--fuenteBotones);
     font-weight: 700;
     font-size: 1.4rem;
+}
 
-
+@media (max-width:768px) {
+    .fondoMain a{
+        padding: 24px 70px;
+    }
 }
 
 .flexMain {
@@ -227,6 +237,11 @@ h1 {
     flex-direction: row;
     /*POR DEFECTO ES ROW*/
     justify-content: space-between;
+    
+}
+
+.flexMain img{
+    margin-right: 10px;
 }
 
 
@@ -243,6 +258,33 @@ h1 {
     padding-bottom: 20px;
     margin-top: -120px;
     border-radius: 12px;
+}
+
+@media (max-width:1140px) and (min-width:768px){
+ 
+    [src="./img/Logos-oficiales.png"]{
+        max-width: 70%;
+        /* margin: 0px 40px; */
+    }
+
+    [src="./img/Logo-Adecco.png"]{
+        max-width: 30%;
+        /* margin: 0px 40px; */
+    }
+}
+
+@media (max-width:768px) {
+    .logos{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logos img{
+        max-width: 90%;
+        padding: 20px;
+    }
+    
 }
 
 /* ESTILOS SECCION CURSOS  */
@@ -310,6 +352,13 @@ h1 {
     justify-content: space-between;
 }
 
+@media (max-width:768px) {
+    .cursosOfertados{
+        flex-direction: column;
+    }
+    
+}
+
 .cursosOfertados>div {
 
     max-width: 50%;
@@ -319,6 +368,23 @@ h1 {
     flex-direction: column;
     justify-content: space-between;
     min-height: 300px;
+}
+@media (max-width:1140px) {
+    .cursosOfertados>div{
+        padding: 20px 30px;
+        
+    }
+}
+
+@media (max-width:768px) {
+    .cursosOfertados>div{
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        max-width: 100%;
+    }
+    
 }
 
 .marketing {
@@ -336,6 +402,7 @@ h1 {
     background-position: right;
     margin-left: 15px;
 }
+
 
 .cursosOfertados h2 {
 
@@ -423,6 +490,23 @@ h1 {
     margin-bottom: 70px;
 }
 
+@media (max-width:1140px) {
+    .video iframe{
+        width: 100%;
+        height: 350px;
+    }
+}
+@media (max-width:768px) {
+    .video iframe{
+        width: 100%;
+        height: 200px;
+    }
+}
+
+
+
+
+
 /* ESTILOS SECCION PARA QUIEN SON ESTOS CURSOS  */
 
 .seccionParaQuien {
@@ -431,9 +515,23 @@ h1 {
     margin-bottom: 100px;
 }
 
+@media (max-width:1140px) {
+    .seccionParaQuien{
+        flex-direction: column;
+    }
+    
+}
+
 .seccionParaQuien>div {
     flex: 1;
     max-width: 50%;
+}
+
+@media (max-width:1140px) {
+    .seccionParaQuien>div {
+    flex: 1;
+    max-width: 100%;
+}
 }
 
 .seccionParaQuien h3 {
