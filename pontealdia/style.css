@@ -27,6 +27,32 @@
 }
 
 
+.ejercicioaquari{
+
+    height: 500px;
+    text-align: center;
+    border: 2px solid;
+}
+
+@media (max-width:350px) {
+
+    .ejercicioaquari { background-color: green;}
+}
+@media (max-width:616px) and (min-width: 350px) {
+
+    .ejercicioaquari { background-color: red;}
+}@media (max-width:933px) and (min-width: 616px)  {
+
+    .ejercicioaquari { background-color: blue;}
+}@media (max-width:1131px)and (min-width: 933px) {
+
+    .ejercicioaquari { background-color: yellow;}
+}
+
+
+
+
+
 
 /* EJERCICIO DISPLAYS INLINE Y BLOCK  */
 
@@ -141,4 +167,21 @@
     background-color: brown;
 }
 
+/* EJERCICIO PARA PRACTICAR MEDIA QUERIES */
 
+/* CREAR UNA SECCION DE 500PX DE ALTURA CON LAS SIGUIENTES RESTRICCIONES
+
+MENOS DE 350PX 
+COLOR FONDO VERDE
+
+MENOS DE 616PX Y MAYOR DE 350PX 
+COLOR FONDO ROJO
+
+MENOS DE 933PX Y MAYOR DE 616PX 
+COLOR FONDO AZUL
+
+MENOS DE 1131PX Y MAYOR DE 933PX 
+COLOR FONDO AMARILLO
+
+MAYOR DE 1131PX 
+COLOR FONDO MARRON */

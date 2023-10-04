@@ -1,0 +1,129 @@
+/*
+/*******************
+COMIENZO CLASE 2023/10/04
+*******************
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    REPASO DÍA ANTERIOR
+
+   
+    RESPONSIVE DESIGN
+
+    @media (min-width: 768px) {
+        body{
+            background-color:yellow;
+        }
+    }
+
+    LO QUE COLOQUEMOS FUERA DE LOS MEDIAQUERIES SE APLICA
+    A TODO, EN MEDIAQUERY SOLO COLOCAMOS LO QUE VA A MODIFICAR
+    EL DISEÑO. PONER EJEMPLO DE TEXTO FUERA DEL MEDIAQUERY
+
+    MOVIL: 480PX
+    TABLET: 768PX
+    ORDENADOR: 1140PX
+
+    SON TAMAÑOS ACONSEJADOS, PERO PODEIS UTILIZAR LOS QUE
+    QUERÁIS
+
+    FIN DEL REPASO
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+
+    VAMOS A VER UNA APP RESPONSIVELY, QUE ME PERMITIRÁ
+    VER DE UN VISTAZO COMO SE ADAPTA MI WEB A LOS
+    DISTINTOS TAMAÑOS DE PANTALLA
+
+    !!!!!!!!!!!!!!!!!
+    EJERCICIO
+
+    ADAPTAR EL MAIN CON LAS MEDIA QUERIES
+
+
+    
+
+    VER COMO AÑADIR CODIGO DESDE CSS SIN PODER SELECCIONARLO
+    SON PSEUDOELEMENTOS, NO SE PUEDEN VER EN EL HTML
+
+    .clase:after {
+        content:'Poner Texto'
+    }
+
+    .clase:before {
+        content: 'Poner Texto'
+    }
+
+
+    USO DE RELATIVE Y ABSOLUTE
+    RELATIVE AL PADRE, REFERENCIA
+    ABSOLUTE AL HIJO
+
+    PONER EJEMPLO DE DOS CONTENEDORES
+
+    <div class="EjPadre">
+        <div class="EjHijo"></div>
+    </div>
+
+    .EjPadre {
+        heigth:200px;
+        weight:500px;
+        position:relative;
+        background-color:red;
+    }
+
+    .EjHijo {
+        positicion:absolute;
+        heigth: 20px;
+        weight: 20px;
+        top: 0px;
+        bottom: 0px;
+        background-color: yellow;
+    }
+
+    SI QUIERO QUE SE APLIQUE A TODO EL ESPACIO DISPONIBLE
+    LO QUE HAGO ES PONER WIDTH Y HEIGHT 100%
+
+
+
+    COMO ORGANIZAR EL CÓDIGO EN CSS
+
+        IR ESCRIBIENDO DE LO MÁS GENERAL A LO MÁS ESPECÍFICO
+
+        ROOT
+
+        HTML
+
+        BODY
+
+        H1, H2, H3, P...
+
+        CLASES, IRLAS AGRUPANDO POR SECCIONES, HEADER, BANNER, CURSOS...
+
+        clases para el banner
+
+        .Banner
+
+        fin de clases para el banner
+
+
+    DEGRADADO Y SOMBRAS EN CSS
+
+        LO PONDREMOS A TODA LA WEB COMO EJEMPLO
+
+        body {
+            background-image: linear-gradient(to top,red 0%, blue 50%);
+        }
+        DIRECCIÓN
+        INICIO Y DONDE INICIA
+        FINAL Y DONDE ACABA
+
+        OTRA ALTERNATIVA CSSMATIC.COM
+
+        ADEMÁS DE DEGRADADO PODEMOS PONER SOMBRAS
+
+        CANIUSE ES UNA HERRAMIENTA QUE ME PERMITE VER LA COMPATIBILIDAD QUE TIENEN LOS NAVEGADORES CON LA PROPIEDAD QUE
+        ESTEMOS APLICANDO. SOLUCION DE GUION -WEBKIT AGREGA PREFIJOS PARA DARLE CARACTERISTICAS ESPECIALES A CIERTOS 
+        NAVEGADORES
+
+
