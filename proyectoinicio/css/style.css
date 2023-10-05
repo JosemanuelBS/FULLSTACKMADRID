@@ -683,16 +683,22 @@ h1 {
     background-color: black;
     padding: 100px 0;
 }
-
+/* 
 .cajas-localizaciones .contenedor {
     display: flex;
-}
+} */
 
 .cajas-localizaciones .contenedor div {
-    width: 25%;
+    /* width: 25%; */
     padding: 24px 0px;
     color: white;
     margin: 0;
+}
+
+.cajas-localizaciones .contenedor{
+    display: grid;
+    /* grid:1fr/1fr 1fr 1fr 1fr; */
+    grid:1fr/repeat(4,1fr);
 }
 
 @media (max-width:1140px) {
