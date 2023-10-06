@@ -1,0 +1,71 @@
+/*******************
+COMIENZO CLASE 2023/10/06
+*******************
+
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+    REPASO DÍA ANTERIOR
+
+        CSS GRID
+
+        display:grid; AL ELEMENTO PADRE
+        grid-template-row: 200px 200px;
+        grid-template-columns: 300px 300px;
+
+        grid: 200px 200px / 300px 300px; ABREVIAR LO ANTERIOR, LO MISMO
+        grid: 50% 50% / 50% 50%;
+        grid: 1fr 1fr / 1fr 1fr;
+        grid: repeat(2, 1fr) / repeat(2, 1fr);
+
+        
+        FLEX: ELEMENTOS DENTRO DE CONTENEDORES
+        GRID: DISTRIBUIR CONTENEDORES
+
+        DISTANCIA ENTRE CONTENEDORES
+        COLUMN-GAP: 10PX;
+        ROW-GAP: 10PX;
+
+        FINALMENTE VER NETLIFY PARA SUBIR EL PROYECTO
+        GRATUTIO
+        SERVIDOR PARA COMPARTIR PROYECTOS CON OTRAS PERSONAS
+
+
+    FIN DEL REPASO
+    %%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+    !!!!!!!!!!!!!!!!!!!!!!!!
+    EJERCICIO
+    CREAR UNA SECCION CON 5 CONTENEDORES
+    PONER 3 FILAS Y 2 COLUMNAS
+
+    DARLE BORDE A LOS CONTENEDORES
+    LAS FILAS MEDIRÁN TODAS LO MISMO 300PX
+    LAS COLUMNAS MEDIRÁN TODAS LO MISMO, Y ABARCAN EL 100% ANCHO PANTALLA
+
+
+    COLUMN DROP
+    .SELECTOR-ELEMENTO-PADRE{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    }
+    
+    .SELECTOR-ELEMENTO-HIJO1{
+    grid-column: 1/3; VER CON FIREFOX DEVELOPER EDITION
+    grid-row: 1/3;
+    }
+
+    ME PERMITE UBICAR EL ELEMENTO HIJO EN CUALQUIER PARTE
+    DE LA ESTRUCTURA QUE HEMOS CREADO CON EL PADRE
+
+
+    !!!!!!!!!!!!!!!!!!
+    EJERCICIOS DE REPASO:
+
+    QUE TEMAS QUEREIS REFORZAR?
+
+    
+
+
