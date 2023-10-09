@@ -2,8 +2,6 @@
 COMIENZO CLASE 2023/10/06
 *******************
 
-
-
     %%%%%%%%%%%%%%%%%%%%%%%%%
     REPASO DÍA ANTERIOR
 
@@ -107,14 +105,24 @@ PARA AHORRARNOS TENER QUE IR PONIENDO let REPETIDAMENTE
 */
 
 let camiseta = "red",
-    pantalon = "yellow",
-    zapatos = "blue";
+pantalon = "yellow",
+zapatos;
+
+// let camiseta = "red",
+//     pantalon = "yellow",
+//     zapatos = "blue";
 
 
 
-console.log("CAMISETA:",camiseta);
-console.log(pantalon);
-console.log(zapatos);
+console.log("comENTARIo CAMISETA:",camiseta);
+
+
+
+
+zapatos = "Negros";
+
+console.log("COLOR DEL PANTALON:",pantalon);
+console.log("COLOR DE ZAPATOS:",zapatos);
 
 
 
@@ -150,10 +158,18 @@ let nombreProducto = "A"; //CAMELCASE, EL MÁS USADO
 let NombreProducto = "A"; //PASCAL CASE
 let nombreproducto = "A"; 
 
+
+
+
+
+
+
+
+
 JAVASCRIPT TIENE EN CUENTA MAYUSCULAS Y MINUSCULAS, IMPORTANTE
 COMO VEMOS LAS VARIABLES POR CONSOLA???
 */
-console.log(producto);
+console.log (producto);
 
 
 // VARIABLES CON VAR
@@ -267,4 +283,6 @@ console.log("METODO INDEXOF:",producto10.indexOf("DUERME"));
 
 //INCLUDES RETORNA TRUE O FALSE
 console.log("METODO INCLUDES:",producto10.includes("DUERME"));
+
+
 
