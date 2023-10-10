@@ -1,5 +1,5 @@
 /*******************
-COMIENZO CLASE 2023/10/06
+COMIENZO CLASE 2023/10/09
 *******************
 
     %%%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,6 +208,12 @@ PARA VALORES FIJOS QUE NO SE VAYAN A A MODIFICAR
 
     NO SE PUEDE INICIALIZAR CON CONST SIN VALOR
     SIEMPRE DEBEN TENER VALOR
+    */
+
+    const constante = "Valor constante";
+    console.log("constante:",constante);
+
+    /*
 
     NO SE PUEDE REASIGNAR
 
@@ -218,71 +224,4 @@ E IDENTIFICAR EL ERROR
 
 
 USAREMOS CONST Y LET A LO LARGO DEL CURSO
-CREAR EL 02-tipos-de-datos.JS
 */
-
-
-// TIPOS DE DATOS EN JAVASCRIPT
-/*
-
-HACE REFERENCIA AL TIPO DE VALOR QUE VA A TENER ESA VARIABLE
-
-NUMERO, TEXTO, BOOLEANO...
-
-    *******STRING
-
-    REPRESENTAN UN TEXTO
-*/
-const producto10 = "Juego de mesa EL PUEBLO DUERME"; //LA MAS UTILIZADA
-const producto2 = String("DOOBLE");
-const producto3 = new String("UNO"); //SON OBJETOS, LO VEREMOS
-
-console.log ("PRODUCTO:",producto10); // VAMOS AÑADIR EN EL CONSOLE.LOG
-//INDICACIONES DE LO QUE ESTAMOS MOSTRANDO
-console.log ("PRODUCTO2 CON STRING:",producto2);
-console.log ("PRODUCTO3 CON NEW STRING:",producto3);
-
-// TYPEOF PARA VER EL TIPO DE DATO QUE TIENE UNA VARIABLE
-console.log ("TYPEOF PRODUCTO:",typeof producto10);
-console.log ("TYPEOF PRODUCTO2:",typeof producto2);
-console.log ("TIPOOF PRODUCTO3",typeof producto3);
-
-/*
-!!!!!!!!!!!!!!!!
-EJERCICIO
-CREAR DOS VARIABLES CON LET 
-
-*/
-
-let numero100 = 100;
-let numero200 = "200";
-
-console.log ("NUMERO100:",numero100);
-console.log ("NUMERO200:",numero200);
-
-console.log ("TIPO DE NUMERO100:",typeof numero100);
-console.log ("TIPO DE NUMERO200:",typeof numero200);
-
-
-/*
-METODOS PARA LOS STRINGS
-
-SON FUNCIONES QUE PUEDES UTILIZAR PARA VARIAR EN
-FUNCION DEL TIPO DE DATO
-
-*/
-
-console.log("METODO LENGTH:",producto10.length); // ME DICE LA LONGITUD DE LA VARIABLE
-
-// INDEXOF PARA BUSCAR SI UNA PALABRA EXISTE EN UNA CADENA DE TEXTO Y ME DA LA POSICION
-
-console.log("METODO INDEXOF:",producto10.indexOf("DUERME"));
-
-// 0 o POSITIVO SI EXISTE EN LA CADENA DE TEXTO
-// -NEGATIVO NO EXISTE
-
-//INCLUDES RETORNA TRUE O FALSE
-console.log("METODO INCLUDES:",producto10.includes("DUERME"));
-
-
-
