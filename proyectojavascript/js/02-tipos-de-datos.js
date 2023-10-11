@@ -77,6 +77,18 @@ console.log("metodo includes:",ejstring3.includes("garaje"));
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /*******************
 COMIENZO CLASE 2023/10/10
 *******************
@@ -142,6 +154,13 @@ let numero4 = 2/3;
 
 // EJERCICIO MOSTRAR POR PANTALLA ESOS NUMEROS Y EL TIPO DE DATOS DE CADA UNO
 
+
+
+
+
+
+
+
 console.log("NUMERO 1:", numero1);
 console.log("NUMERO 2:", numero2);
 console.log("NUMERO 3:", numero3);
@@ -152,7 +171,7 @@ console.log("TYPEOF NUMERO 2:", typeof numero2);
 console.log("TYPEOF NUMERO 3:", typeof numero3);
 console.log("TYPEOF NUMERO 4:", typeof numero4);
 
-console.log("NUMERO1 Y TYPEOF NUMERO 1:", numero1, typeof numero1);
+console.log("NUMERO1 Y TYPEOF NUMERO 1::::::::::", numero1, typeof numero1);
 console.log("NUMERO2 Y TYPEOF NUMERO 2:", numero2, typeof numero2);
 console.log("NUMERO3 Y TYPEOF NUMERO 3:", numero3, typeof numero3, numero3.length);
 console.log("NUMERO4 Y TYPEOF NUMERO 4:", numero4, typeof numero4);
@@ -237,17 +256,41 @@ console.log("USO DE METODO RANDOM():",resultado);
     Math.max(2,3,1,0); ME DA EL VALOR MAYOR
     
     COMBINACIONES DE LAS ANTERIORES
-    NUMERO ALEATORIO ENTRE 0 Y 30 ENTERO
+
+    !!!!!!!!!!!!!!!!
+    EJERCICIO
+    NUMERO ALEATORIO ENTERO ENTRE 0 Y 30 ENTERO
+
+    */
+
+    resultado = Math.round(Math.random()*30);
+    console.log("NUMERO ALEATORIO ENTERO ENTRE 0 Y 30",resultado);
+
+
+
+
+
 
     Math.floor( Math.random()*30);
 
-
+/*
 
 !!!!!!!!!!!!!!!!!!!!
 EJERCICIO
 CREAR UNA VARIABLE QUE SE LLAME DIAMETRO Y OTRA QUE SE LLAME AREA
 IMPLEMENTAR LA OPERACIÓN MATEMÁTICA QUE ME CALCULA EL AREA EN FUNCIÓN
 DEL DIAMETRO Y MOSTRARLO POR PANTALLA
+
+
+
+
+
+
+
+
+
+
+
 
 */
 let diametro = 20;
@@ -259,13 +302,38 @@ console.log("Este es el numero redondeado con Mathround", areaRedondeo);
 
 
 
+
+
+
+
 //!!!!!!!!!!!!!!!!!!!!!!
 // EJERCICIO, CREAR UN DADO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 let dado = Math.round(1+Math.random()*5);
 
 console.log("Resultado dado:", dado);
 /*
+
+
+
+
+
 
 
 !!!!!!!!!!!!!!!!!!!!
@@ -321,16 +389,44 @@ DESCUENTO
 
 */
 
-let prenda1 = 120;
-let prenda2 = 85;
-let prenda3 = 24;
-let porcentaje = 40 //porcentaje
+let prenda1=500;
+let prenda2=80;
+let prenda3=1;
 
-let descuento =(prenda1 + prenda2 + prenda3) * porcentaje/100;
-console.log("total descuento",descuento);
+let descuento=30; //40% es lo mismo que 0,4
+// 100% es lo mismo que 1
+// 10% es lo mismo que 0,1
+// conclusion X% es X/100
 
-let totalPagar = (prenda1 + prenda2 + prenda3) - descuento;
-console.log("total a pagar",totalPagar);
+//CALCULAMOS EL IMPORTE SIN DESCUENTO
+let importe= prenda1 + prenda2 + prenda3;
+console.log("importe sin descuento",importe);
+
+//CALCULAMOS EL AHORRO
+let ahorro=importe*descuento/100;
+console.log("descuento total del carrito",ahorro);
+
+//IMPORTE TOTAL CON DESCUENTO INCLUIDO
+let total=importe - ahorro;
+console.log("Total con descuento incluido",total);
+
+/*
+
+
+
+
+*/
+
+// let prenda1 = 120;
+// let prenda2 = 85;
+// let prenda3 = 24;
+// let porcentaje = 40 //porcentaje
+
+// let descuento =(prenda1 + prenda2 + prenda3) * porcentaje/100;
+// console.log("total descuento",descuento);
+
+// let totalPagar = (prenda1 + prenda2 + prenda3) - descuento;
+// console.log("total a pagar",totalPagar);
 
 
 
@@ -348,11 +444,24 @@ EJEMPLO REALES, EL NUMERO DE ME GUSTAS EN INSTAGRAM
 
 */
 
-let meGusta=0;
+let meGusta=10;
 
-//meGusta++; // INCREMENTA EN 1 EL VALOR DE meGusta
+//meGusta+=15; // INCREMENTA EN 1 EL VALOR DE meGusta
+// megusta=megusta + 150001;
+megusta-=6; // megusta=megusta-6;
+// meGusta=meGusta+1;
 
-console.log("USO DE INCREMENTOS, ME GUSTA:",meGusta+=15);
+console.log("USO DE INCREMENTOS, ME GUSTA:",meGusta);
+// console.log("USO DE INCREMENTOS, ME GUSTA 2:",meGusta++);
+
+
+
+
+
+
+
+
+
 console.log("TRAS EL INCREMENTO",meGusta)
 
 // SI COLOCO EL INCREMENTO DENTRO DEL CONSOLE.LOG PRIMERO
@@ -381,6 +490,15 @@ CREAMOS 2 VARIABLES TIPO CONST Y LE ASIGNAMOS LOS VALORES QUE QUERAMOS
 NOMBRE
 EMAIL
 
+
+
+
+
+
+
+
+
+
 Y MOSTRAMOS POR PANTALLA
 
 COMO PODEMOS HACER PARA MOSTRARLO TODO JUNTO?
@@ -397,9 +515,22 @@ SINTAXIS ANTIGUA, PARA SOLUCIONAR ESTO VEREMOS LOS TEMPLATE STRING
 let nombreJM = "Jose Manuel";
 let emailJM = "jose@jose.es";
 
-console.log("ESTE ES EL NOMBRE:",nombreJM)
+console.log("ESTE ES EL NOMBRE:",nombreJM);
+console.log(`ESTE ES EL NOMBRE: ${nombreJM}`);
+
+
+
+
+
+
+
+
 console.log("ESTE ES EL EMAIL:",emailJM)
-console.log("NOMBRE Y EMAIL CONCATENADOS:", nombreJM + " " + emailJM)
+
+
+
+console.log("NOMBRE Y EMAIL CONCATENADOS:"+ nombreJM + " " + emailJM)
+console.log(`NOMBRE Y EMAIL CONCATENADOS: ${nombreJM} ${emailJM}`)
 
 
 
@@ -415,7 +546,8 @@ ES UN SUSTITUTO DE LA SINTAXIS ANTERIOR
 */
 
 
-console.log(`Nombre Cliente: ${nombreJM} Email: ${emailJM}`); //COMILLAS INVERTIDAS, DERECHA DE LA P
+console.log(`Nombre Cliente: ${nombreJM} Email: ${emailJM}`); 
+//COMILLAS INVERTIDAS, DERECHA DE LA P
 
 
 /*LAS VARIABLES VAN ENTRE ${} PUEDE IR UNA FUNCIÓN TAMBIEN
@@ -457,7 +589,7 @@ OTRA FORMA DE CREAR BOOLEANOS
 const boolean4 = new Boolean(true); POCO UTILIZADA, UTILIZAREMOS LA PRIMERA
 
 
-PONER EL 03.JS Y DAR INICIO A LOS OBJETOS
+PONER EL 03-obtejos.JS Y DAR INICIO A LOS OBJETOS
 LA PARTE MÁS IMPORTANTE DE JAVASCRIPT
 
 */

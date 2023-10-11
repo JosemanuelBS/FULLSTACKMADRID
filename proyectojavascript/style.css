@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#slide1{
+    background-color: red;
+}
+#slide2{
+    background-color: blue;
+}
+#slide3{
+    background-color: green;
+}
+.slider {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    overflow: hidden;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+    transition: transform 3s ease-in-out;
+}
+
+/* Estilos para la animación del slider */
+.slider .slide:first-child {
+    transform: translateX(0);
+}
+
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    33.33% {
+        transform: translateX(-100%);
+    }
+    66.67% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slider:hover .slide {
+    animation: slideAnimation 15s linear infinite;
+}
