@@ -65,40 +65,36 @@ EJERCICIO!!!!!!!!!!
 CREAR 3 VARIABLES
 
 PASO1:
-VARIABLEA = "varA"
-VARIABLEB = "varB"
-VARIABLEC = "varC"
+VARIABLEA = "valor varA"
+VARIABLEB = "valor varB"
+VARIABLEC = "valor varC"
+
+*/
+let variableA = "Valor varA";
+let variableB = "Valor varB";
+let variableC = "Valor varC";
+/*
 
 PASO2:
 CREAR OBJETO EJERCICIO6 VACIO
-
-PASO3:
-VAMOS A CREAR PROPIEDADES A ESE OBJETO A PARTIR DE LAS VARIABLES
-
-PASO4:
-MOSTRAMOS POR PANTALLA EL OBJETO
 */
-
-let variableA = "varA";
-let variableB = "varB";
-let variableC = "varC";
-
-let ejercicio6 = {}; //OBJETO
-
-//CREAMOS LAS PROPIEDADES A PARTIR DE LAS VARIABLES
-ejercicio6.variableA = variableA;
-ejercicio6.variableB = variableB;
-ejercicio6.variableC = variableC;
-
-//MOSTRAMOS EL OBJETO POR PANTALLA
-console.log("MOSTRAMOS EL EJERCICIO6", ejercicio6);
+let ejercicio6 = {};
 
 /*
 
+PASO3:
+VAMOS A CREAR PROPIEDADES A ESE OBJETO A PARTIR DE LAS VARIABLES
+*/
+ejercicio6.variableA = variableA;
+ejercicio6.variableB = variableB;
+ejercicio6.variableC = variableC;
+/*
+PASO4:
+MOSTRAMOS POR PANTALLA EL OBJETO
+*/
+console.log(ejercicio6)
 
-
-
-
+/*
 VAMOS A DAR COMIENZO A LOS ARREGLOS A ARRAYS
 
 FORMAN UNA PARTE DE LOS LENGUAJES DE PROGRAMACIÓN
@@ -130,6 +126,11 @@ console.table(meses);
 EJERCICIO
 CREAR UN ARRAY diaSemana
 Y MOSTRARLO POR PANTALLA EN FORMATO TABLA
+*/
+let diaSemana = ["L", "M", "X", "J", "V"];
+console.table(diaSemana)
+
+/*
 
 
 DENTRO DEL ARRAY PODEMOS TENER VALORES DE TODO TIPO, POR EJEMPLO
@@ -148,7 +149,7 @@ EN LA MAYORÍA DE LENGUAJE DE PROGRAMACION
 EL INDICE EMPIEZA EN 0
 
 */
-console.log("ACCEDIENDO A LOS VALORES DEL ARRAY CON EL INDICE", numeros[2]); 
+console.log("ACCEDIENDO A LOS VALORES DEL ARRAY CON EL INDICE 2", numeros[2]);
 //ACCEDE AL VALOR CON INDICE 2 DEL ARRAY
 /*
 
@@ -226,21 +227,24 @@ numeros.push(80, 90, 100) // PUEDES AÑADIR TANTOS VALORES COMO DESEES
 // NO ES BUENA PRACTICA MODIFICAR LOS ARRAYS ORIGINALES
 
 numeros.unshift(-10, 129020, -30); // AÑADE ELEMENTOS AL INICIO
+console.log(numeros)
 
 // ELIMINAR ELEMENTOS DE UN ARRAY
 
 numeros.pop(); // ME ELIMINA EL ULTIMO ELEMENTO DEL ARRAY
+console.log(numeros)
 numeros.shift(); // ELIMINA EL PRIMER ELEMENTO
+console.log(numeros)
 console.table(numeros);
 
 // ELIMINAR X ELIMENTOS A PARTIR DEL Y splice(Y,X)
 numeros.splice(2, 3); // (INDICE, VALORES A ELIMINAR)
-
+console.log(numeros)
 // LAS DESVENTAJAS ES QUE ESTAMOS MODIFICANDO EL ARRAY ORIGINAL
 // PARA EVITAR ESO, CREAMOS UN ARRAY NUEVO CON REST/SPREAD OPERATOR
 
-const nuevoArreglo = [...numeros,1540];
-console.table(nuevoArreglo);
+const nuevoArreglo = [16.54, ...numeros, 1540];
+console.log(nuevoArreglo);
 
 
 /*
@@ -258,11 +262,13 @@ PRIMAVERA, VERANO, OTOÑO, INVIERNO
 MOSTRAMOS POR PANTALLA
 
 */
+let estaciones = ["Verano"];
+estaciones.unshift("Primavera");
+estaciones.push("Otoño", "Invierno")
 
-const estaciones = ["verano"];
-estaciones.unshift("primavera");
-estaciones.push("otoño", "invierno");
-console.table(estaciones);
+console.log(estaciones)
+
+
 
 //!!!!!!!!!! EJERCICIO
 
@@ -273,26 +279,51 @@ console.table(estaciones);
 
 // MOSTRAR POR PANTALLA
 
+
 let carrito = [
     {
-        nombre: "TV",
-        precio: 750
+        nombre: "Nombre1",
+        precio: 1
     },
     {
-        nombre: "Tablet",
-        precio: 350
+        nombre: "Nombre2",
+        precio: 2
     },
     {
-        nombre: "Movil",
-        precio: 550
+        nombre: "Nombre3",
+        precio: 3
     },
     {
-        nombre: "PC",
-        precio: 1750
+        nombre: "Nombre4",
+        precio: 4
     }
 ];
+console.table(carrito)
 
-console.table(carrito);
+
+
+
+
+// let carrito = [
+//     {
+//         nombre: "TV",
+//         precio: 750
+//     },
+//     {
+//         nombre: "Tablet",
+//         precio: 350
+//     },
+//     {
+//         nombre: "Movil",
+//         precio: 550
+//     },
+//     {
+//         nombre: "PC",
+//         precio: 1750
+//     }
+// ];
+
+// console.table(carrito);
 
 
 // MÁS MÉTODOS PARA LOS ARRAYS
@@ -315,7 +346,7 @@ console.log("RESULTADO DE FUNCION SOME IDEAL", resultado);
 
 // COMO SABER EL TOTAL DEL CARRITO. REDUCE
 
-resultado = carrito.reduce(function (total, producto) { // PARA ITERAR
+resultado = carrito.reduce(function (total=0, producto) { // PARA ITERAR
     // TOTAL, PRODUCTO SON LOS PARAMETROS DE LA FUNCION
     return total + producto.precio
 }, 0); // EL VALOR DONDE INICIA
@@ -324,12 +355,13 @@ console.log("USO DE REDUCE", resultado);
 // FILTER, PARA FILTRAR
 // EL MÁS UTILIZADO
 
-resultado = carrito.filter(function (producto) {
-    return producto.precio > 400
+resultado = carrito.filter(function (X) {
+    return X.precio <= 1
 });
 console.log("USO DE FILTER", resultado);
 
-// === IGUALES
+// === EXACTAMENTE IGUALES
+// == IGUALES PERO NO ESTRICTAMENTE 200="200"
 // !== DIFERENTES
 // < MENOR QUE
 // <= MENOR IGUAL
