@@ -390,12 +390,13 @@ console.log("EL VALOR RETORNADO ES:", valorRetornado);
 let total = 0;
 
 function agregarCarrito(precio) {
+    
     return total += precio;
 }
 
-total = agregarCarrito(200);
-total = agregarCarrito(500);
-total = agregarCarrito(600);
+agregarCarrito(200);
+agregarCarrito(500);
+agregarCarrito(600);
 
 console.log("EL TOTAL A PAGAR ES DE:", total)
 
@@ -411,13 +412,13 @@ PRODUCTOS ANTERIORES UNO A UNO Y LOS SUME
 let totalAhorrado=0;
 let descuento=20;
 
-function calcularImpuesto(precio=0){
+function calcularDescuento(precio=0){
     return totalAhorrado+=(precio*descuento/100)
 }
 
-calcularImpuesto(200);
-calcularImpuesto(500);
-calcularImpuesto(600);
+calcularDescuento(200);
+calcularDescuento(500);
+calcularDescuento(600);
 
 console.log("EL DESCUENTO TOTAL ES DE:",totalAhorrado)
 
@@ -485,7 +486,6 @@ FUNCIONES DE FLECHA / ARROW FUNCTION
 let triplicar = function(numero=1){
     return numero*numero*numero;
 }
-
 let valorTriplicado = triplicar(12);
 console.log(valorTriplicado)
 
@@ -511,7 +511,12 @@ console.log(valorTriplicado2)
 EJERCICIO
 
 CREAMOS NUEVO ARROW FUNCTION, aprendiendo, QUE  DEVUELVA UN NUMERO +7 Y LO 
-ALMACENE EN UNA VARIABLE resultadoAprendiendo
+ALMACENE EN UNA VARIABLE resultadoAprendiendo*/
+
+let  aprendiendoFerro=numero => numero+7
+let resultadoAprendiendoFerro=aprendiendoFerro(16)
+console.log(resultadoAprendiendoFerro)
+
 
 
 
@@ -521,7 +526,7 @@ let aprendiendo = (numero=1)=> numero + 7; //PODEMOS ELIMINAR EL RETURN
 let resultadoAprendiendo=aprendiendo(12);  
 console.log("USO DE ARROW FUNCTION",resultadoAprendiendo)
 
-
+/*
 
 !!!!!!!!!!!!!!!
 EJERCICIO
@@ -597,6 +602,16 @@ resultado = carrito.filter(function (producto) {
 });
 console.log("USO DE FILTER", resultado);
 
+
+
+
+
+
+
+
+
+
+
 // === ESTRICTAMENTE IGUALES, INCLUIDO TIPO DATO
 // !== DIFERENTES EXTRICTAMENTE, INCLUIDOS TIPO DATO
 // == IGUALES, SIN DIFERENCIAR TIPO DATO
@@ -613,26 +628,95 @@ console.log("USO DE FILTER CON ARROW FUNCTION", resultado);
 
 
 
+
+
+
+
+
+
+
+
+
+
 /*
 EJERCICIO1.
 CREAR UNA FUNCIÓN QUE SUME 3 NUMEROS DADOS. PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
-sumaExpresion
 sumaDeclaracion
+sumaExpresion
 sumaFlecha
+Y MUESTRE RESULTADOS POR CONSOLA
+
+*/
+
+function sumaDeclaracion (n1,n2,n3){
+    console.log(n1+n2+n3)
+}
+
+sumaDeclaracion(1,2,3)
+
+let sumaExpresion = function(n1,n2,n3){
+    console.log(n1+n2+n3);
+}
+
+sumaExpresion(10,20,30)
+
+let sumarFlecha = (n1,n2,n3)=> console.log(n1+n2+n3);
+
+sumarFlecha(2,5,7)
+/*
+
+
+
+
+
+
+
+
+
+
+
 
 EJERCICI02
-CREAR UNA FUNCIÓN QUE BUSQUE ELEMENTOS DE UN ARRAY NUMEROS DADOS. PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
+CREAR UNA FUNCIÓN QUE BUSQUE ELEMENTOS DE UN ARRAY NUMEROS.
+PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
 buscaExpresion
 buscaDeclaracion
 buscaFlecha
 
-EJERCICIO3
+*/
 
-CREAR UNA FUNCIÓN QUE SUME ME COMPRUEBE SI UN NUMERO ES MAYOR QUE OTRO
-. PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
-comparadorExpresion
-comparadorDeclaracion
-comparadorFlecha
+numeros=[10,20,30,40];
+
+/*DECLARACION*/
+
+let buscarDeclaracion = function(array,x){
+    return array.includes(x)
+};
+console.log(buscarDeclaracion(numeros,10));
+
+/*EXPRESION*/
+
+function buscarExpresion(array,x){
+    return array.includes(x)
+};
+console.log(buscarExpresion(numeros,80))
+
+/*ARROW*/
+
+let buscarFlecha = (array,x) => array.includes(x);
+console.log(buscarFlecha(numeros,20));
+
+
+/*
+
+
+
+
+
+
+
+
+
 
 
 !!!!!!!!!!!!!
@@ -640,6 +724,18 @@ EJERCICIO4
 CREAR UNA FUNCIÓN DE FLECHA QUE DADOS 2 PARÁMETROS 
 ME DE 10 VECES LA SUMA DE AMBOS
 */
+
+
+let sumarParametros=(n1,n2) => (n1+n2)*10;
+
+console.log(sumarParametros(10,20))
+
+
+
+
+
+
+
 
 let ejercicio1 = (n1, n2) => console.log("resultado de la operacion", (n1 + n2) * 10);
 ejercicio1(4, 7);
@@ -657,6 +753,21 @@ CREAR UNA FUNCIÓN DE FLECHA QUE DADO DOS PARÁMETROS
 ME INDIQUE EL NÚMERO DE CARACTERES DE LOS DOS
 */
 
+let caracteres = (x,y) => (x.length)+(y.length);
+console.log(caracteres("hola", "adios"))
+
+
+function caracteresDeclaracion(x,y){
+    return (x.length)+(y.length);
+}
+console.log(caracteresDeclaracion("hola","adios"))
+
+
+
+
+
+
+
 let ejercicio2 = (p1, p2) => console.log("resultado ejercicio2", (p1 + p2).length);
 
 ejercicio2("nomre", "apellido");
@@ -666,6 +777,11 @@ ejercicio2("nomre", "apellido");
 
 
 
+
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!EJERCICIO
+// CREAR UNA FUNCIÓN DE FLECHA QUE QUITE EL ULTIMO ELEMENTO DEL FINAL
+// DE UN ARRAY NUEVO QUE CREEMOS CADA VEZ QUE LA LLAMAMOS.
 
 
 
