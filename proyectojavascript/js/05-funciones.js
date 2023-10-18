@@ -91,12 +91,14 @@ DECLARACIÓN DE LA FUNCIÓN
 
 //PRIMERO CREAMOS LA FUNCIÓN
 
+sumar(10, 20); // SEGUNDO LLAMAMOS A LA FUNCIÓN
+
 function sumar(n1, n2) { // ARGUMENTO DE LA FUNCIÓN
     //CUERPO DE LA FUNCION
     console.log(n1 + n2);
 };
 
-sumar(10, 20); // SEGUNDO LLAMAMOS A LA FUNCIÓN
+
 
 /*
  
@@ -106,12 +108,15 @@ sumar(10, 20); // SEGUNDO LLAMAMOS A LA FUNCIÓN
 *******************
 EXPRESION DE LA FUNCION
 */
+
+
 const sumar2 = function (n3, n4) {
     console.log(n3 + n4);
 }
 
-
 sumar2(3, 9);
+
+
 
 // LA REALIDAD ES QUE LO ASIMILA MÁS A UNA VARIABLE QUE
 // A UNA FUNCIÓN
@@ -154,8 +159,8 @@ ES MAS EL CONTEXTO EN EL QUE SE UTILIZAN
 const numero1 = 20;
 const numero2 = "20";
 
-console.log(parseInt(numero2)); // parseInt() ES UNA FUNCION
-console.log(numero1.toString()); // .toString() ES UN MÉTODO
+console.log(typeof(parseInt(numero2))); // parseInt() ES UNA FUNCION
+console.log(typeof(numero1.toString())); // .toString() ES UN MÉTODO
 
 // NOMBRE DE FUNCION SEGUIDO DE PARENTESIS === FUNCIONES
 // . SEGUIDO DEL NOMBRE DE LA FUNCION === METODOS. SIEMPRE LIGADO A LA VARIABLE
@@ -172,7 +177,19 @@ COLOR
 Y MUESTRE POR PANTALLA
  
 EL COLOR ELEGIDO ES:...
- 
+*/
+function color(micolorelegido){
+    console.log(`El color elegido es ${micolorelegido}`);
+    console.log("El color elegido es",micolorelegido);
+}
+
+color("verde");
+color("rojo");
+
+
+
+
+/*
  
 !!!!!!!!!!!!
 EJERCICIO
@@ -185,7 +202,16 @@ Y EL PRECIO FINAL
  
 LLAMAR VARIAS VECES A LA FUNCIÓN CON DISTINTOS VALORES
  
- 
+ */
+
+function precioFinal (importe,descuento){
+    console.log(`Descuento es de: ${importe*(descuento/100)}`)
+    console.log(`Precio final es de: ${((importe-(importe*descuento)/100))}`)
+}
+
+precioFinal(100,20);
+
+/*
  
  
  
@@ -193,6 +219,7 @@ LLAMAR VARIAS VECES A LA FUNCIÓN CON DISTINTOS VALORES
 EJERCICIO
  
 CREAR UNA FUNCIÓN QUE CUENTE LOS CARACTERES DE UN TWEET 
+ARGUMENTO DE ENTRADA, EL TEXTO DEL TWEET
  
 */
 
@@ -202,8 +229,10 @@ function tweet(textoTweet) {
 
 tweet("Este es un texto de prueba para contar el numero de caracteres");
 
+
 // CREAR UNA FUNCIÓN QUE DADO UN TEXTO Y UNA PALABRA, ME DIGA SI
 // LA PALABRA ESTA CONTENIDA EN EL TEXTO
+
 
 function buscar(texto, palabra) {
     console.log("Buscamos la palabra en el texto, está?:", texto.includes(palabra))
@@ -213,11 +242,25 @@ buscar("Este texto vamos a buscar", "buscar");
 buscar("Texto donde voy a buscar", "rojo");
 
 
-// function añadir(palabra, array){
-//     console.log(array.push(palabra))
-// }
+// EJERCICIO
+// CREAR UNA FUNCIÓN QUE AÑADA UN ELEMENTO AL FINAL A UN ARRAY PREVIAMENTE DEFINIDO
+// MOSTRARLO POR CONSOLA
+// RECIBE COMO ARGUMENTO DE ENTRA EL ELEMENTO
+// LA FUNCION SE LLAMARA AÑADIR
 
-// añadir(3,[1,2]);
+
+
+function añadirFruta(array,k){
+    array.push(k);
+    console.log(array)
+}
+
+let frutas=["pera","platano"];
+añadirFruta(frutas,123456789);
+//console.log(frutas)
+
+
+
 
 /*
  
@@ -229,6 +272,7 @@ EJERCICIO
 CREAR UNA FUNCIÓN QUE ME RESTE DOS VALORES DADOS
  
 */
+
 
 function restar(n1, n2) {
     console.log(`Resultado de restar ${n1}-${n2}: ${n1 - n2}`)
@@ -273,7 +317,65 @@ ecuacionSegundo(2, 10);
 
 
 
-// FUNCIONEN QUE RETORNAN VALORES
+
+
+
+
+
+
+
+
+
+
+
+/*
+*******************
+    COMIENZO CLASE 2023/10/18
+*******************
+
+
+!!!!!!!!!!!!!!!!!
+REPASO DÍA ANTERIOR
+
+    FUNCIONES EN JAVASCRIPT
+
+        SERIE DE PROCEDIMIENTO O INSTRUCCIONES QUE REALIZAN UNA ACCION
+        SON REUTILIZABLES
+
+    FORMAS DE CREAR FUNCIONES:
+
+        DECLARACION DE LA FUNCION
+            function sumar(n1,n2){
+                console.log(n1+n2);
+            }
+            sumar(10,20)
+
+        EXPRESION DE LA FUNCION
+            let sumar=function(n1,n2){
+                console.log(n1+n2)
+            }
+            sumar(20,30)
+
+        IIFE
+            (function(){
+                console.log("Funcion IIFE")
+            })();
+
+        DOS ETAPAS:
+            PRIMERO----- CREAMOS
+            SEGUNDO----- LLAMAMOS
+
+
+
+
+FIN DEL REPASO
+!!!!!!!!!!!!!!!!!
+
+*/
+
+
+
+// FUNCIONES QUE RETORNAN VALORES
 
 function multiplicar(n1, n2) {
     return n1 * n2; // ME RETORNA UN VALOR
@@ -298,44 +400,269 @@ total = agregarCarrito(600);
 console.log("EL TOTAL A PAGAR ES DE:", total)
 
 
-
-
-
 /*
 !!!!!!!!!!!!
 EJERCICIO
-REALIZAR UNA FUNCIÓN QUE CALCULES EL IVA QUE SE INDIQUE DE LOS
+REALIZAR UNA FUNCIÓN QUE CALCULES EL DESCUENTO QUE SE INDIQUE DE LOS
 PRODUCTOS ANTERIORES UNO A UNO Y LOS SUME
 */
 
 
-let impuesto=0;
-let IVA=21;
+let totalAhorrado=0;
+let descuento=20;
 
 function calcularImpuesto(precio=0){
-    return impuesto+=(precio*IVA/100)
+    return totalAhorrado+=(precio*descuento/100)
 }
 
-impuesto = calcularImpuesto(200);
-impuesto = calcularImpuesto(500);
-impuesto = calcularImpuesto(600);
+calcularImpuesto(200);
+calcularImpuesto(500);
+calcularImpuesto(600);
 
-console.log("EL TOTAL DE IMPUESTOS A PAGAR ES DE:",impuesto)
+console.log("EL DESCUENTO TOTAL ES DE:",totalAhorrado)
 
 
 
-let totalConImpuestos = 0;
+// MÉTODOS DE PROPIEDAD
 
-function sumarImpuestos(precio, impuesto) {
-    return totalConImpuestos += precio * (1+impuesto / 100)
+// SON FUNCIONES CON LA SINTAXIS DE MÉTODO
+// VAMOS A CREAR UN REPRODUCTOR MUSICAL
+
+const reproductor ={ // ES UN OBJETO DE FUNCIONES
+    reproducir : function(nc){ 
+        console.log(`Reproduciendo Canción con ID: ${nc}`)
+    },
+    
+    pausar : function(){
+        console.log("PAUSANDO CANCIÓN...")
+    },
+
+    crearPlaylist : function(nombre){
+        console.log(`Creando Playlist: ${nombre}`)
+    }
 }
 
-sumarImpuestos(200, 10);
-sumarImpuestos(300, 21);
-sumarImpuestos(500, 5);
+reproductor.reproducir(3840);
+reproductor.pausar();
+reproductor.crearPlaylist("Metal");
 
-console.log("EL TOTAL CON IMPUESTOS ES DE:", totalConImpuestos)
 
+
+
+// AÑADIR UNA NUEVA PROPIEDAD AL OBJETO
+// QUE SEA UNA FUNCIÓN BORRAR
+
+
+
+// AÑADIMOS UNA PROPIEDAD MÁS
+reproductor.borrarCancion = function(id){
+    console.log(`Borrando Canción con ID: ${id}`)
+}
+
+reproductor.borrarCancion(34);
+
+// VEREMOS EL DOM Y LOS EVENTOS MÁS ADELANTE
+
+
+function nombreCompleto(nombre,ap1,ap2){
+    console.log("Nombre Completo:",nombre+" "+ap1+" "+ap2),
+    console.log(nombre,ap1,ap2)
+    console.log(`${nombre} ${ap1} ${ap2}`)
+}
+
+nombreCompleto("Federico","García","Lorca");
+
+/*
+
+FUNCIONES DE FLECHA / ARROW FUNCTION
+
+        SINTAXIS MÁS CORTA
+
+        PARTIREMOS DE LA EXPRESIÓN DE LA FUNCIÓN 
+*/
+
+//EXPRESIÓN DE LA FUNCIÓN
+let triplicar = function(numero=1){
+    return numero*numero*numero;
+}
+
+let valorTriplicado = triplicar(12);
+console.log(valorTriplicado)
+
+//ARROW FUNCTION
+    //PASOS
+    /*
+        ELIMINAR EL FUNCTION
+        AÑADIR => FLECHA ANTES DE LA LLAVE DE APERTURA
+        CUANDO SOLO SE TIENE UNA LINEA EN EL CUERPO DE LA FUNCIÓN PODEMOS ELIMINAR LAS LLAVES
+            SI HAY MÁS DE UNA HAY QUE PONERLA {}
+        CUANDO SOLO SE TIENE UN PARÁMETRO SE PUEDE ELIMINAR LOS PARÉNTESIS
+            SI HAY MAS DE UN PARAMETRO, VACIO, O INICICIALIZADO HAY QUE PONERLO()
+        EL RETURN VA IMPLICITO EN EL CUERPO DE LA FUNCIÓN, SE PUEDE OMITIR SU VA SOLO
+            SI HAY MÁS DE UNA LINEA EN EL CUERPO DE LA FUNCIÓN HAY QUE PONERLO
+    */
+
+let triplicarFlecha = (numero=1) => numero*numero*numero;
+
+let valorTriplicado2 = triplicarFlecha(12);
+console.log(valorTriplicado2) 
+
+/* !!!!!!!!!!!!!!!!!
+EJERCICIO
+
+CREAMOS NUEVO ARROW FUNCTION, aprendiendo, QUE  DEVUELVA UN NUMERO +7 Y LO 
+ALMACENE EN UNA VARIABLE resultadoAprendiendo
+
+
+
+
+let aprendiendo = (numero=1)=> numero + 7; //PODEMOS ELIMINAR EL RETURN
+
+let resultadoAprendiendo=aprendiendo(12);  
+console.log("USO DE ARROW FUNCTION",resultadoAprendiendo)
+
+
+
+!!!!!!!!!!!!!!!
+EJERCICIO
+
+CONVERTIR CADA UNA DE LAS SIGUIENTES FUNCIONES EN ARROW FUNCTION
+COPIAR EL ARRAY CARRITO DEL FINAL DEL ARCHIVO 04-arrays.JS
+
+
+*/
+    
+
+let carrito = [
+    {
+        nombre: "TV",
+        precio: 750
+    },
+    {
+        nombre: "Tablet",
+        precio: 350
+    },
+    {
+        nombre: "Movil",
+        precio: 550
+    },
+    {
+        nombre: "PC",
+        precio: 1750
+    }
+];
+
+//console.table(carrito);
+
+
+
+// SOME IDEAL PARA ARREGLO DE OBJETOS. ME BUSCA ESE VALOR DENTRO DEL ARRAY
+let resultado;
+
+resultado = carrito.some(function (producto) {
+    return producto.nombre === "Tablet"
+});
+
+console.log("RESULTADO DE FUNCION SOME IDEAL", resultado);
+
+// PONER CON ARROW FUNCTION
+
+resultado = carrito.some(producto=>producto.nombre==="Tablet");
+console.log("RESULTADO DE FUNCION SOME IDEAL CON FUNCION DE FLECHA", resultado);
+
+
+
+
+
+
+// COMO SABER EL TOTAL DEL CARRITO
+
+resultado = carrito.reduce(function (total, producto) { // PARA ITERAR
+    // TOTAL, PRODUCTO: PARAMETROS DE LA FUNCION
+    return total + producto.precio
+},0); //SUMA UN VALOR AL RESULTADO SIMPLEMENTE
+console.log("USO DE REDUCE", resultado);
+
+//PONER CON ARROW FUNCTION
+
+resultado = carrito.reduce((total, producto)=> total + producto.precio, 0); // EL VALOR DEL INDICE DONDE INICIA
+console.log("USO DE REDUCE CON ARROW FUNCTION", resultado);
+
+
+
+// FILTER, PARA FILTRAR
+
+resultado = carrito.filter(function (producto) {
+    return producto.precio > 400
+});
+console.log("USO DE FILTER", resultado);
+
+// === ESTRICTAMENTE IGUALES, INCLUIDO TIPO DATO
+// !== DIFERENTES EXTRICTAMENTE, INCLUIDOS TIPO DATO
+// == IGUALES, SIN DIFERENCIAR TIPO DATO
+// != DIFERENTES, PERO NO INCLUYE EL TIPO DE DATO
+// < MENOR QUE
+// <= MENOR IGUAL
+// > MAYOR QUE
+// >= MAYOR IGUAL
+
+// PONER CON ARROW FUNCTION
+
+resultado = carrito.filter( producto=>producto.precio > 400);
+console.log("USO DE FILTER CON ARROW FUNCTION", resultado);
+
+
+
+/*
+EJERCICIO1.
+CREAR UNA FUNCIÓN QUE SUME 3 NUMEROS DADOS. PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
+sumaExpresion
+sumaDeclaracion
+sumaFlecha
+
+EJERCICI02
+CREAR UNA FUNCIÓN QUE BUSQUE ELEMENTOS DE UN ARRAY NUMEROS DADOS. PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
+buscaExpresion
+buscaDeclaracion
+buscaFlecha
+
+EJERCICIO3
+
+CREAR UNA FUNCIÓN QUE SUME ME COMPRUEBE SI UN NUMERO ES MAYOR QUE OTRO
+. PONERLA CON EXPRESION, DECLARACIÓN Y COMO FUNCIÓN DE FLECHA
+comparadorExpresion
+comparadorDeclaracion
+comparadorFlecha
+
+
+!!!!!!!!!!!!!
+EJERCICIO4
+CREAR UNA FUNCIÓN DE FLECHA QUE DADOS 2 PARÁMETROS 
+ME DE 10 VECES LA SUMA DE AMBOS
+*/
+
+let ejercicio1 = (n1, n2) => console.log("resultado de la operacion", (n1 + n2) * 10);
+ejercicio1(4, 7);
+
+
+
+
+
+/*
+
+
+!!!!!!!!!!!!!
+EJERCICIO5
+CREAR UNA FUNCIÓN DE FLECHA QUE DADO DOS PARÁMETROS
+ME INDIQUE EL NÚMERO DE CARACTERES DE LOS DOS
+*/
+
+let ejercicio2 = (p1, p2) => console.log("resultado ejercicio2", (p1 + p2).length);
+
+ejercicio2("nomre", "apellido");
+
+
+// PASAMOS AL ARCHIVO 06-estructuras-control.js
 
 
 
