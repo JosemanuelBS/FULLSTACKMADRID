@@ -785,6 +785,13 @@ ejercicio2("nomre", "apellido");
 
 
 
+let quitarUltimoElemento = (arr)=> arr.pop();
+let myArray = [1,2,3,4,8];
+
+quitarUltimoElemento(myArray)
+quitarUltimoElemento(myArray)
+
+console.log (myArray)
 
 
 
