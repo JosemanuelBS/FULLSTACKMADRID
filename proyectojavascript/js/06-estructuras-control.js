@@ -68,7 +68,7 @@ if (numeroJM === 1000) { // DOS/TRES IGUALES ES UNA COMPARACIÓN
     console.log("numeroJM es 1000")
 }
 else {    // SI NO SE CUMPLE EL IF, EJECUTA EL ELSE
-    numeroJM.log("numeroJM NO es 1000")
+    console.log("numeroJM NO es 1000")
 }
 
 /* TIPOS DE COMPARADORES
@@ -87,8 +87,49 @@ else {    // SI NO SE CUMPLE EL IF, EJECUTA EL ELSE
 EJERCICIO
 CREAR UNA ESTRUCTURA DE CONTROL QUE COMPRUEBE SI EL PIN ES CORRECTO
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 EJERCICIO
 CREAR UNA ESTRUCTURA DE CONTROL QUE COMPRUEBE SI PUEDO RETIRAR EL DINERO
+
+
+*/
+
+let saldoJM=200;
+let pinJM=1234;
+let importeRetirar=1100;
+let pinIntroducido=1234;
+
+if(pinIntroducido===pinJM){
+    console.log("Pin OK");
+    if(importeRetirar<=saldoJM){
+        console.log("Saldo Suficiente")
+    }else{
+        console.log("Mete dinero")
+    }
+}else{
+    console.log("Esta tarjeta no es tuya bandido")
+}
+
+
+
+
+
+
+/*
+
 
 
 EJERCICIO COMPLETO DEL CAJERO
@@ -102,6 +143,12 @@ pin correcto es 1234;
 saldo en cuenta es de 49;
 
 LA FUNCIÓN RECIBIRÁ COMO ARGUMENTOS pin, cantidadRetirar
+
+
+
+
+
+
 
 
 
@@ -141,7 +188,36 @@ if (rol === "Administrador") { // DOS IGUALES ES UNA COMPARACIÓN
 // CREAR UNA ESTRUCTURA DE CONTROL QUE COMPARE EN QUE ESTACIÓN DEL AÑO ESTAMOS
 // Y ME DIGA CUAL ES LA SIGUIENTE. PRIMAVERA-VERANO-OTOÑO-INVIERNO
 
- 
+let estacionActual="Verano";
+
+if(estacionActual==="Primavera"){
+    console.log("Estamos en primavera y la siguiente estación es Verano")
+}else if(estacionActual==="Verano"){
+    console.log("Estamos en verano y la siguiente estación es Otoño")
+}else if(estacionActual==="Otoño"){
+    console.log("Estamos en Otoño y la siguiente estación es Invierno")
+}else if(estacionActual==="Invierno"){
+    console.log("Estamos en Invierno y la siguiente estación es Primavera")
+}else{
+    console.log("Lo que has introducido no es una estacion")
+}
+
+// CREAR UNA ESTRUCTURA DE CONTROL QUE ME DIGA SI LA NOTA UN EXAMEN 
+// ES SOBRESALIENTE 9-10
+// NOTABLE 7-8
+// SUFICINTE 5-6
+// SUSPENSO -5
+
+// CREAMO UNA VARIABLE NUEVA QUE SE LLAME notaExamen
+
+let notaExamen=9.1;
+
+if(notaExamen>=9 && notaExamen<=10){
+    console.log("SOBRESALIENTE")
+}
+
+
+
 
 // USO DE SWITCH, PARA HACER MÚLTIPLIES COMPARACIONES
 // Y OPTIMIZAR EL USO DE TANTO ELSE IF
@@ -153,7 +229,16 @@ DEFAULT ME MUESTRA EL CASO POR DEFECTO
 
 */
 
-const metodoPago = "Tarjeta";
+
+
+
+
+
+
+
+
+// let metodoPago = prompt("Introduce tu metodo de pago","Escriba aqui");
+let metodoPago="Tarjeta";
 
 switch (metodoPago) {
     case "Tarjeta": console.log("Pagaste con tarjeta"); //CASO 1
@@ -180,6 +265,37 @@ ANTERIORES
  
 */
 
+
+let numeroEj3 = 10;
+
+if(numeroEj3*numeroEj3<100){
+    console.log("El numero multiplicado por si mismo es menor que 100")
+}else if(numeroEj3*numeroEj3<200){
+    console.log("El numero multiplicado por si mismo es menor que 200")
+}else{
+    console.log("El numero multiplicado por si mismo es mayor que 200")
+}
+
+
+function multiplo(x){
+    if(x*x<100){
+        console.log("El numero multiplicado por si mismo es menor que 100")
+    }else if(x*x<200){
+        console.log("El numero multiplicado por si mismo es menor que 200")
+    }else{
+        console.log("El numero multiplicado por si mismo es mayor que 200")
+    }
+}
+
+multiplo(5)
+
+
+
+
+
+
+
+
 const numero = 12;
 if (numero * numero < 100) {
     console.log("el resultado es menor que 100");
@@ -199,6 +315,7 @@ if (numero * numero < 100) {
 EJERCICIO4
 CREAR UNA ESTRUCTURA DE CONTROL CON SWITCH QUE ME COMPARE SI
 UN NÚMERO + 10 ES:
+COGER EL NUERMO DESDE EL PROMPT
 =9
 =12
 =15
@@ -207,7 +324,16 @@ RESTO DE POSIBILIDADES
  
 */
 
-const numero2 = 5 + 10;
+let numeroMas10= parseInt(prompt("Escribe aqui tu numero"));
+
+
+
+
+
+
+
+
+const numero2 = prompt("Escriba aqui tu numero","Tu numero");
 switch (numero2) {
     case 9: console.log("ES IGUAL A 9");
         break;
@@ -256,6 +382,21 @@ for (let i = 0; i <= 3; i++) {
 
 
 // EJERCICIO, MOSTRAR DEL 100 AL 200 POR PANTALLA
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 for (let i = 100; i <= 200; i++) {
     console.log(`El numero ${i} está entre el 100 y el 200`);
 } // :) 
@@ -268,6 +409,18 @@ EJERCICIO5
 MOSTRAR EN ORDEN DESCENDENTE DEL 100 HASTA EL 0, PERO
 DE 5 EN 5
 INCLUIDOS AMBOS
+
+
+
+
+
+
+
+
+
+
+
+
 
 */
 for (let i = 100; i >= 0; i -= 5) {
@@ -284,6 +437,17 @@ MOSTRAR DEL 1 AL 20 TODOS LOS NÚMEROS PARES
 INCLUIDOS AMBOS
 NOTA: i%2===0 ME DA LA CONDICIÓN DE PAR
 */
+
+
+
+
+
+
+
+
+
+
+
 
 for (let k = 1; k <= 20; k++) {
     if (k % 2 === 0) {
@@ -328,7 +492,32 @@ let carrito = [
 EN QUE POSICION INICIA UN ARRAY??
 MOSTRAR LOS OBJETOS DE UNO EN UNO
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
+
+
+
+
+let arrayNumeros=[1,22,23,4,5,6,7,8,9];
+
 
 for (let i = 0; i < carrito.length; i++) {
     console.log(carrito[i]);
@@ -344,6 +533,16 @@ MUY SIMILAR AL FOR, SINTAXIS UN POCO DIFERENTE
 SE EJECUTA MIENTRAS UNA CONDICION SEA EVALUADA COMO
 VERDADERA
 */
+
+
+
+
+
+
+
+
+
+
 
 let i = 0;
 // EL INDICE VA FUERA
@@ -421,6 +620,16 @@ INCLUIDOS AMBOS
 NOTA: i%2===0 ME DA LA CONDICIÓN DE PAR
 */
 
+
+
+
+
+
+
+
+
+
+
 let k = 1;
 while (k <= 20) {
     if (k % 2 === 0) {
@@ -445,6 +654,15 @@ CREAR UNA FUNCION QUE DADO UN ARGUMENTO ME DIGA SI
 * ES =0
 
 */
+
+
+
+
+
+
+
+
+
 function ejercicio9(n1) {
     if (n1 < 0) {
         console.log("El número es negativo:", n1)
@@ -470,6 +688,18 @@ EJERCICIO10
 CREAR UNA FUNCIÓN QUE DADO UN ARGUMENTO, (NUMERO ENTERO)
 ME DE UNA CUENTA ATRÁS DE LOS NÚMEROS
 */
+
+
+
+
+
+
+
+
+
+
+
+
 function ej10(n1) {
     while (n1 >= 0) {
         console.log("Cuenta regresiva", n1)
@@ -486,6 +716,17 @@ EJERCICIO11
 CREAR UNA FUNCIÓN QUE DADO UN ARGUMENTO DE ENTRADA N, ME
 DE LA SUMA DE TODOS LOS NUMEROS ENTRE 0 Y N
 */
+
+
+
+
+
+
+
+
+
+
+
 let resultadoejercicio11 = 0;
 
 function ejercicio11(n1) {
@@ -525,6 +766,15 @@ ME MUESTRE DE MANERA REGRESIVA, EL NUMERO ENTRE 10
 
 */
 
+
+
+
+
+
+
+
+
+
 function ej12(n1) {
     while (n1 >= 0) {
         console.log("Cuenta regresiva", n1 / 10)
@@ -551,6 +801,24 @@ FUNCION QUE DADO UN ARGUMENTO, ME CALCULE LA MEDIA
 DE LA SUMA DE TODOS LOS VALORES
 USAR WHILE
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 let resultadoejercicio13 = 0;
 let contador2 = 0;
 function ejercicio13(n4) {
@@ -588,9 +856,15 @@ ejercicio13(45);
 
 
 
+
+
+
+
+
+
 /*
 *******************
-    COMIENZO CLASE 2023/03/21
+    COMIENZO CLASE 2023/10/23
 *******************
 
 /*
