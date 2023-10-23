@@ -385,18 +385,6 @@ for (let i = 0; i <= 3; i++) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 for (let i = 100; i <= 200; i++) {
     console.log(`El numero ${i} está entre el 100 y el 200`);
 } // :) 
@@ -409,17 +397,6 @@ EJERCICIO5
 MOSTRAR EN ORDEN DESCENDENTE DEL 100 HASTA EL 0, PERO
 DE 5 EN 5
 INCLUIDOS AMBOS
-
-
-
-
-
-
-
-
-
-
-
 
 
 */
@@ -497,21 +474,34 @@ MOSTRAR LOS OBJETOS DE UNO EN UNO
 
 
 
+FOREACH Y MAP. MÉTODOS EXCLUSIVOS PARA ARREGLOS
 
+METODOS DE UN ARRAY
+SOLO SE PUEDEN EJECUTAR EN ARREGLOS, UNA VEZ POR CADA ELEMENTO
+DEL ARRAY
 
-
-
-
-
-
-
-
-
-
-
-
+PARTIMOS DEL ARRAY CARRITO
 
 */
+carrito.forEach(function (producto) {
+    console.log(producto, producto.nombre);
+})
+/*
+!!!!!!!!!!!!!!!!!!!!!
+EJERCICIO
+PASAR A FUNCIÓN DE FLECHA EL FOREACH ANTERIOR
+*/
+carrito.forEach(producto => console.log(producto,producto.nombre));
+
+/* MAP
+ES IGUAL QUE EL FOREACH, LA DIFERENCIA ES QUE
+MAP SE USA PARA CREAR NUEVOS ARRAY Y EL FOREACH
+PARA MOSTRAR POR PANTALLA
+*/
+
+const arrayMap = carrito.map(producto => producto.nombre);
+
+console.log(arrayMap);
 
 
 
@@ -831,44 +821,7 @@ function ejercicio13(n4) {
 }
 ejercicio13(45);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*
-*******************
-    COMIENZO CLASE 2023/10/23
-*******************
-
-/*
-!!!!!!!!!!!!!
 EJERCICIO
 CREAR UNA FUNCIÓN QUE DADOS DOS ARGUMENTOS, SOLO ME MUESTRE LOS IMPARES
 ENTRE ELLOS, Y LA SUMA DE TODOS ELLOS, LOS IMPARES
@@ -938,41 +891,9 @@ ejercicio17("febrero")
 
 
 
-/*
+//PASAMOS AL 07-EJERCICIOS-FUNCIONES.JS
 
 
 
 
-
-
-FOREACH Y MAP. MÉTODOS EXCLUSIVOS PARA ARREGLOS
-
-METODOS DE UN ARRAY
-SOLO SE PUEDEN EJECUTAR EN ARREGLOS, UNA VEZ POR CADA ELEMENTO
-DEL ARRAY
-
-PARTIMOS DEL ARRAY CARRITO
-
-*/
-carrito.forEach(function (producto) {
-    console.log(producto, producto.nombre);
-})
-/*
-!!!!!!!!!!!!!!!!!!!!!
-EJERCICIO
-PASAR A FUNCIÓN DE FLECHA EL FOREACH ANTERIOR
-*/
-carrito.forEach(producto => console.log(producto,producto.nombre));
-
-/* MAP
-ES IGUAL QUE EL FOREACH, LA DIFERENCIA ES QUE
-MAP SE USA PARA CREAR NUEVOS ARRAY Y EL FOREACH
-PARA MOSTRAR POR PANTALLA
-*/
-
-const arrayMap = carrito.map(producto => producto.nombre);
-
-console.log(arrayMap);
-
-// PASAMOS AL 07.JS
 
