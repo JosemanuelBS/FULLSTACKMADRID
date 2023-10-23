@@ -105,4 +105,28 @@ función que ordene un array de números de forma ascendente.
 F: ORDENARARRAY
 P: ARRAY
 
+
+función que muestre la tabla de multiplicar de un numero.
+F: TABLAMULTIPLICAR
+A: NUMERO
+
+
+función que tome un número del 1 al 12 y devuelva el nombre del mes 
+correspondiente utilizando una declaración switch
+F: NOMBREMES
+P: NUMMES
+
+
+función que determine si una contraseña es segura basándose en 
+longitud>8, 
+mayúsculas y minusculas
+números
+F: CONTRASEÑASEGURA
+P: CONTRASEÑA
+
+
+función que tome una cadena y reemplace todas las letras 'LETRA1' por 'LETRA2'.
+F: REEMPLAZAR
+P: LETRA1, LETRA2
+
 */
