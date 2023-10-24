@@ -45,7 +45,7 @@ let carrito = [
 
 
 carrito.forEach(function (producto) {
-    console.log(producto, producto.nombre);
+    console.log(producto, producto.nombre, producto.precio);
 })
 /*
 !!!!!!!!!!!!!!!!!!!!!
