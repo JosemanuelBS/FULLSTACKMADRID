@@ -1,5 +1,5 @@
 
-/*
+
 
 /*
 *******************
@@ -79,13 +79,35 @@ MEDIANTE LA SINTAXIS DE PUNTO MOSTRAR EL NOMBRE
 */
 
 
-
-
 const reserva = {
     nombre : "Juan",
     apellido : "Nuñez",
     total: 5000,
-    pagado: true
+    pagado: true,
+    // informacion: function(){
+    // return(`El cliente ${this.nombre} reservó
+    // y su cantidad a pagar es de ${this.total}€`)}
+}
+
+reserva.informacion=function(){
+    return(`El cliente ${this.nombre} reservó
+y su cantidad a pagar es de ${this.total}€`
+// console.log("El cliente",this.nombre,"tiene que pagar",this.total
+)};
+
+
+
+
+
+
+const reserva2 = {
+    nombre : "Juan",
+    apellido : "Nuñez",
+    total: 5000,
+    pagado: true,
+    informacion: function(){
+    return(`El cliente ${this.nombre} reservó
+    y su cantidad a pagar es de ${this.total}€`)}
 }
 
 console.log (reserva.nombre)
@@ -94,11 +116,6 @@ console.log (reserva.nombre)
 LOS OBJETOS TAMBIEN PUEDEN TENER FUNCIONES EN SU INTERIOR
 */
 
-reserva.informacion=function(){
-    console.log(`El cliente ${this.nombre} reservó
-y su cantidad a pagar es de ${this.total}€`
-// console.log("El cliente",this.nombre,"tiene que pagar",this.total
-)};
 
 console.log(reserva.informacion());
 
@@ -121,8 +138,13 @@ CREAR UN OBJETO LLAMADO FECHA
 CON PROPIEDADES, AÑO, MES, DÍA, FALTANTES
 CON UNA FUNCIÓN EN SU INTERIOR QUE ME DIGA 
 CUANTOS DÍAS QUEDAN PARA ACABAR EL MES SI 
-MARZO TIENE 31 DÍAS
+OCTUBRE TIENE 31 DÍAS
 */
+
+
+
+
+
 
 const fecha = {
     a: 2023,
@@ -137,7 +159,7 @@ const fecha = {
 }
 fecha.faltante();
 
-
+// PASAMOS AL 09-POO.JS
 
 
 
