@@ -62,7 +62,6 @@ console.log(producto3);
 console.log(producto4);
 
 
-
 // EJEMPLO REAL, UN FORMULARIO DE REGISTRO DE FACEBOOK
 
 /*
@@ -74,12 +73,23 @@ CON PROPIEDADES, AÑO, MES, DÍA
 DAR 4 VALORES DISTINTOS
 */
 
+function Fecha(año, mes, dia){
 
+    this.año = año;
+    this.mes = mes;
+    this.dia = dia
 
+}
 
+let fecha1 = new Fecha(2023,"Octubre",25);
+let fecha2 = new Fecha(2023,"Octubre",26);
+let fecha3 = new Fecha(2023,"Octubre",27);
+let fecha4 = new Fecha(2023,"Octubre",28);
 
-
-
+console.log(fecha1);
+console.log(fecha2);
+console.log(fecha3);
+console.log(fecha4);
 
 
 
@@ -93,18 +103,18 @@ ESPECIFICO
 
 */
 ProductoClase.prototype.formatearProducto = function() {
-    console.log(`El producto ${this.nombreObjeto} tiene un precio de ${this.precioObjeto} €`);
+    return(`El producto ${this.nombreObjeto} tiene un precio de ${this.precioObjeto} €`);
 };
 
+const producto50 = new ProductoClase("Monitor curvo",800,true,"tech");
+const producto60 = new ProductoClase("PC",1800);
+const producto70 = new ProductoClase("Reloj",800);
+console.log(producto50.formatearProducto());
+console.log(producto60.formatearProducto());
+console.log(producto70.formatearProducto());
 
-//COMENTAR EL DE ARRIBA PARA VER ESTE
 
-// const producto2 = new ProductoClase("Monitor curvo",800);
-// const producto3 = new ProductoClase("PC",1800);
-// const producto4 = new ProductoClase("Reloj",800);
-// console.log(producto2.formatearProducto());
-// console.log(producto3.formatearProducto());
-// console.log(producto4.formatearProducto());
+// CREAR INSTANCIAS PARA PRODUCTO5, 6, 7
 
 
 
@@ -123,15 +133,19 @@ class ProductoClase2{
     }
 
     formatearProducto2(){
-        console.log(`El producto ${this.nombreObjeto2} tiene un precio de ${this.precioObjeto2} €`);
+        return (`El producto ${this.nombreObjeto2} tiene un precio de ${this.precioObjeto2} €`);
+    }
+    descuento(){
+        return (`El precio final con el descuento es de ${this.precioObjeto2*(1-0.2)}`)
     }
 }
 
 //INSTANCIAS
-const producto5 = new ProductoClase2("TV nueva",678);
-
-console.log(producto5)
-console.log(producto5.formatearProducto2())
+const producto8 = new ProductoClase2("TV nueva",678);
+console.log("Producto 8 con class")
+console.log(producto8);
+console.log(producto8.formatearProducto2());
+console.log(producto8.descuento())
 
 /*
 !!!!!!!!!!!!!!!!!!!
@@ -160,6 +174,29 @@ Y GENERAR UNA INSTANCIA AL MENOS
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Libro {
     constructor(nombre,precio,isbn){
 
@@ -172,23 +209,15 @@ class Libro {
 const libroObjeto = new Libro("Curso Fullstack",120,912229);
 console.log(libroObjeto);
 
-// const libroObjeto3 ={
-//     nombre: "Curso Fullstack",
-//     precio: 120,
-//     isbn: 912229,
-//     color: "azul",
-//     tapa: "dura",
-//     papel: true
-// }
 
-// const libroObjeto4 ={
-//     nombre: "Curso Fullstack",
-//     precio: 120,
-//     isbn: 912229,
-//     color: "azul",
-//     tapa: "dura",
-//     papel: true
-// }
+
+
+
+
+
+
+
+
 // PARA QUE USAMOS LA HERENCIA, PARA COPIAR PROPIEDADES DE UNA CLASE A OTRA
 
 class Biblioteca extends Libro{
@@ -202,7 +231,8 @@ class Biblioteca extends Libro{
         console.log(`El producto ${this.nombre} pertenece a la categoria ${this.categoria}`)
     }
 }
-//  RESOLVER PROBLEMA DE HERENCIA
+
+// RESOLVER PROBLEMA DE HERENCIA
 // CAMBIAR THIS POR SUPER EN EL MÉTODO
 
 
@@ -220,28 +250,59 @@ console.log(libroObjeto2.formatearProducto3())
 EJERCICIO
 CREAR UN OBJECT CONSTRUCTOR COCHE
 CON PROPIEDADES MARCA, AÑOCOMPRA, MOTOR, MATRICULA
-UNA FUNCIÓN QUE ME DIGA EL NÚMERO DE AÑOS QUE TIENE EL COCHE
+UNA FUNCIÓN/METODO QUE ME DIGA EL NÚMERO DE AÑOS QUE TIENE EL COCHE
 
 CREAR DOS INSTANCIA, UNA PARA TU COCHE, Y OTRA EL DE TU PADRE
 
 
 */
 
-class Coche {
-    constructor(marca,año,motor,matricula){
+class Coche{
+    constructor(marca,añoCompra,motor,matricula){
         this.marca=marca;
-        this.año=año;
+        this.añoCompra=añoCompra;
         this.motor=motor;
         this.matricula=matricula;
     }
-    calculaEdad(){
-        console.log(`La edad de tu coche ${this.marca} es de ${2023-this.año}`)
+
+    edadCoche(){
+        return(`El coche tiene una edad de ${2023- this.añoCompra}`)
     }
 }
 
-const miCoche = new Coche("Renault Twingo",1900,"39cv","0022abc");
-console.log(miCoche);
-console.log(miCoche.calculaEdad());
+let miCoche = new Coche("Seat",2001,"65cv","1234as")
+console.log(miCoche.edadCoche())
 
-const cochePapa = new Coche("mini morris",1200,null,"2322pd");
-console.log(cochePapa);
+
+
+/*
+!!!!!!!!!!!!!!!!!!!!!
+EJERCICIO
+CREAR OTRO CONSTRUCTOR DE OBJETOS LLAMADO ITV QUE HEREDE DE LA CLASE COCHE
+AÑOCOMPRA, MATRICULA Y AÑADA AÑOITV
+
+Y ME DE UN METODO CON EL TIEMPO QUE ME FALTA PARA LA PROXIMA ITV
+
+*/
+
+
+class Itv extends Coche{
+    constructor (añoCompra,matricula,añoItv){
+
+        super(undefined,añoCompra,undefined,matricula)
+        this.añoItv=añoItv
+    }
+
+    proximaItv(){
+        return (`La proxima ITV es dentro de ${this.añoItv-2023} años`)
+    }
+}
+
+miCoche = new Itv(2003,"1234ab",2025);
+console.log(miCoche.proximaItv())
+
+
+
+// PASAMOS AL 10-PROMISES.JS
+
+
