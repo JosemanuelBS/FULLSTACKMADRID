@@ -230,6 +230,7 @@ class Biblioteca extends Libro{
     formatearProducto3(){
         console.log(`El producto ${this.nombre} pertenece a la categoria ${this.categoria}`)
     }
+    
 }
 
 // RESOLVER PROBLEMA DE HERENCIA
@@ -296,6 +297,7 @@ class Itv extends Coche{
     proximaItv(){
         return (`La proxima ITV es dentro de ${this.añoItv-2023} años`)
     }
+    edadCoche(){super.edadCoche()} 
 }
 
 miCoche = new Itv(2003,"1234ab",2025);
