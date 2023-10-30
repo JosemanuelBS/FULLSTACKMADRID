@@ -53,3 +53,8 @@ body {
 .slider:hover .slide {
     animation: slideAnimation 15s linear infinite;
 }
+
+
+.fondoRojo{
+    background-color: red;
+}

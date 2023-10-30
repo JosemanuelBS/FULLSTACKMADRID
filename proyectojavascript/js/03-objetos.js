@@ -170,7 +170,19 @@ TODO EN UN SOLO PASO
 let {precio,categoria} = producto;
 
 
+/*
 
+    let producto = {
+        nombreProducto: "Reloj",
+        precio: 65,
+        disponible: true,
+        categoria: "relojes"
+    }
+
+
+
+
+*/
 
 
 

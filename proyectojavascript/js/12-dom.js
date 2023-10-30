@@ -1,9 +1,7 @@
 /*
 
 
-CREAMOS EL ARCHIVO interaccion.js Y COMENTAMOS EL 10
-
-PONER DIAPOSITIVA 18
+CREAMOS EL ARCHIVO 12-dom.js Y COMENTAMOS EL 11
 
 AHORA VEREMOS COMO ACTUAR JAVASCRIPT EN EL DOM, COMO SELECCIONAR ELEMENTOS DEL HTML, 
 COMO CREAR EVENTOS, MODIFICAR HTML ETC
@@ -71,9 +69,11 @@ QUERYSELECTOR ******************************
 
     heading.classList.remove("NuevaClaseDesdJS"); //ELIMINAR
 
+    heading.classList.add("fondoRojo")
+
     // SI INTENTAMOS SELECCIONAR LOS ENLACES
 
-    const enlacesJS = document.querySelector("a");
+    const enlacesJS = document.querySelector("div a");
     console.log(enlacesJS);//SOLO ME MUESTRA EL PRIMERO
     // ES UNA PROPIEDAD DE QUERYSELECTOR, O ME MUESTRA UN ELEMENTO O NINGUNO
     // PARA SOLUCIONAR ESO SURGE EL QUERYSELECTORALL
@@ -86,7 +86,7 @@ QUERYSELECTOR ******************************
 QUERYSELECTORALL **************************
 */
 
-const enlacesJS2 = document.querySelectorAll("a");
+const enlacesJS2 = document.querySelectorAll("div a");
 console.log(enlacesJS2);
 //ME MUESTRA TODOS LOS ENLACES QUE CONCUERDAN CON LA SELECCIÓN
 //ME LO MUESTRA EN UN NODELIST, PARA ACCEDER A CADA ELEMENTO, LO HACEMOS
@@ -103,6 +103,12 @@ MODIFICAR EL CONTENIDO Y EL HREF DEL SEGUNDO ENLACE UNICAMENTE CON QUERYSELECTOR
 PONER CONTENIDO MODIFICADO CON QUERYSELECTORALL. Y LLEVAR A OTRO ENLACE EXTERNO
 
 
+*/
+enlacesJS2[1].textContent = "Enlace2 Modificado";
+enlacesJS2[1].href="https://google.com"
+
+/*
+
 
 
 
@@ -111,10 +117,16 @@ GETELEMENTBYID ****************************
 YA SE USA MENOS, SE SUELEN UTILIZAR LOS ANTERIORES
 
 */
-const botonJS = document.getElementById("boton");
+const botonJS = document.getElementById("botonPrincipal");
 console.log(botonJS);
 
 //TODO LO VISTO ANTERIORMENTE PARA AÑADIR/MODIFICAR/ELIMINAR PROPIEDADES ES APLICABLE EN GETELEMENTBYID
+
+//GETELEMENTBYCLASSNAME ****************************
+
+const botonJsClass =document.getElementsByClassName("botonClase")
+
+
 
 /*
 
@@ -139,7 +151,7 @@ nuevoEnlace.href = "#";
 
 //AGREGAR TEXTO
 
-nuevoEnlace.textContent = "Nuevo Enlace";
+nuevoEnlace.textContent = "Nuevo Enlace4";
 
 //AGREGAR CLASE
 
@@ -148,7 +160,6 @@ nuevoEnlace.classList.add("enlace");//LE AÑADO LA CLASE DE INFORMATE
 console.log(nuevoEnlace)
 
 //AGREGAMOS AL DOCUMENTO
-//LO QUEREMOS AGREGAR A LA DERECHA DEL BOTON INFORMATE
 
 const enlacesJS3 =document.querySelector(".navPrincipal");//PARA ELLO SELECCIONAMOS EL ELEMENTO PADRE
 enlacesJS3.appendChild(nuevoEnlace)//APPENCHILD ME PERMITE AGREGAR ELEMENTOS HIJOS
@@ -165,14 +176,29 @@ HACERLO TODO CON JS
 */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const ejercicioEnlace = document.createElement("A");//NOS PERMITE CREAR CODIGO HTML
 //JAVASCRIPT RECOMIENDA USAR MAYUSCULAS CUANDO USAMOS CREATE
 //AGREGAR HREF
-cies.href = "#";
+ejercicioEnlace.href = "#";
 //AGREGAR TEXTO
-cies.textContent = "Ejercicio Enlace";
+ejercicioEnlace.textContent = "Ejercicio Enlace";
 //AGREGAR CLASE
-cies.classList.add("enlaces");//LE AÑADO LA CLASE
+ejercicioEnlace.classList.add("enlaces");//LE AÑADO LA CLASE
 //AGREGAMOS AL DOCUMENTO
 //LO QUEREMOS AGREGAR A LA DERECHA DEL BOTON INFORMATE
 
