@@ -1,13 +1,12 @@
-body {
+/* body {
     margin: 0;
     padding: 0;
-    display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     overflow: hidden;
-}
-
+} */
+/* 
 #slide1{
     background-color: red;
 }
@@ -52,9 +51,14 @@ body {
 
 .slider:hover .slide {
     animation: slideAnimation 15s linear infinite;
-}
+} */
 
 
 .fondoRojo{
+    background-color: red;
+}
+
+.espaciador{
+    height: 10000px;
     background-color: red;
 }

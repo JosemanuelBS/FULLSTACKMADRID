@@ -13,6 +13,7 @@ REPASO DÍA ANTERIOR
         QUERYSELECTOR
         QUERYSELECTORALL
         GETELEMENTBYID
+        GETELEMENTBYCLASSNAME
 
 
     QUERYSELECTOR ******************************
@@ -78,20 +79,17 @@ CREAR UNA PANTALLA EMERGENTE QUE PIDA INFORMACIÓN SOBRE TU NOMBRE.
 AÑADIR ESTE NOMBRE AL TITULO H1 QUE TENÍAMOS CREADO AYER
 
 
+*/
+
+// let nombreAp = prompt("escribe tu nombre");
+
+// let tituloh1 = document.querySelector("h1");
+
+// tituloh1.textContent=nombreAp;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+/*
 
 
 
@@ -112,9 +110,11 @@ window.addEventListener("load",function(){ // AÑADIMOS EVENTOS CON ADDEVENTLIST
     //PRIMERO LE DECIMOS QUE TIPO DE EVENTO VAMOS A TENER, LOAD, CLICK, SCROLL...
     //DESPUES LLAMAMOS AL CALLBACK, TAMBIEN PUEDEN SER FUNCIONES A PARTE
     //LOAD ESPERA A QUE EL HTML, CSS, JS Y LOS ARCHIVOS QUE DEPENDEN DEL HTML ESTEN LISTOS
-    console.log("se ha cargafado html, css, js");
+    console.log("se ha cargado html, css, js");
 
 })
+
+console.log(2)
 
 //WINDOW ES TODO EL DOCUMENTO, MÁS GLOBAL AUN QUE EL HTML
 //ES UN NIVEL MÁS ALTO
@@ -129,17 +129,24 @@ document.addEventListener("DOMContentLoaded",function(){
 
 console.log(4);
 
+
+
+
 //EVENTO DE SCROLL
 window.addEventListener("scroll",function(){
     console.log("Scrolling...")
 })
 
 
+
+
+
 //VAMOS A VER COMO APLICAR LOS EVENTOS A MIS ELEMENTOS DEL HTML
 //HASTA AHORA LO HEMOS HECHO AL WINDOW Y DOCUMENT
 
 //EVENTO DE CLICK
-const botonNotificacion = document.querySelector("#boton"); //HEMOS SELECCIONADO YA EL ELEMENTO
+
+const botonNotificacion = document.querySelector("#botonPrincipal"); //HEMOS SELECCIONADO YA EL ELEMENTO
 
 botonNotificacion.addEventListener("click",function(evento){ 
     console.log(evento);//ME MUESTRA INFORMACIÓN DEL EVENTO
@@ -150,6 +157,15 @@ botonNotificacion.addEventListener("click",function(evento){
 })
 
 
+
+
+
+
+
+
+
+
+
 //EJERCICIO. CREAR UN FORMULARIO DE CONTACTO EN HTML CON
 //NOMBRE
 //CORREO
@@ -157,6 +173,15 @@ botonNotificacion.addEventListener("click",function(evento){
 //BOTON ENVIAR
 
 /*
+
+
+
+
+
+
+
+
+
 
     <form>
 
