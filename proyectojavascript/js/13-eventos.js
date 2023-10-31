@@ -226,7 +226,7 @@ const nombre = document.querySelector("#Nombre");
 //EVENTO CHANGE
 
 nombre.addEventListener("change", function(){ // ESTE EVENTO SE EJECUTA CUANDO SALIMOS
-    console.log("Escribiendo nombre...");
+    console.log("Se ha completado el nombre");
 })
 
 //EVENTO INPUT
@@ -234,12 +234,45 @@ nombre.addEventListener("change", function(){ // ESTE EVENTO SE EJECUTA CUANDO S
 nombre.addEventListener("input", function(evento){ // ESTE EVENTO ES A TIEMPO REAL
     console.log("Escribiendo nombre con input...");
     console.log(evento)
-    console.log(evento.target.value); //ME MUESTRA POR PANTALLA EN EL DATA LA INFORMACIÓN
+    console.log(evento.target.value);
+     //ME MUESTRA POR PANTALLA EN EL DATA LA INFORMACIÓN
     // EN UN INPUT LA INFORMACIÓN SE ALMACENA EN EL VALUE
 })
 
 // EJERCICIO
 // CREAR EL EVENTO DE INPUT EN CORREO Y MENSAJE
+// DEBAJO DEL FORMULARIO, CREAR UN ELEMENTO TIPO P, QUE
+// DIGA, ESTA ES LA WEB DE .... CON CORREO ... Y SU
+// PROPUESTA ES: .....
+
+const emailF = document.querySelector("#Email");
+const mensajeF = document.querySelector("#Mensaje");
+let resultadoNombre,
+    resultadoEmail,
+    resultadoMensaje;
+emailF.addEventListener("input", function(evento){
+    resultadoEmail = evento.target.value;
+    actualizarTexto();
+});
+
+mensajeF.addEventListener("input", function(evento){
+    resultadoMensaje = evento.target.value;
+    actualizarTexto();
+});
+
+nombre.addEventListener("input", function(evento){
+    resultadoNombre = evento.target.value;
+    actualizarTexto();
+});
+
+
+function actualizarTexto(){
+    document.querySelector(".parrafo").textContent = `Esta es la web de ${resultadoNombre} con email ${resultadoEmail} 
+    y su propuesta es ${resultadoMensaje}` 
+}
+
+
+
 
 
 // EJERCICIO
