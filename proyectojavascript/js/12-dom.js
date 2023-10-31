@@ -202,9 +202,6 @@ ejercicioEnlace.classList.add("enlaces");//LE AÑADO LA CLASE
 //AGREGAMOS AL DOCUMENTO
 //LO QUEREMOS AGREGAR A LA DERECHA DEL BOTON INFORMATE
 
-//const NodoReferencia = document.querySelector(".cursoPrimero")
-
-
 const selectorEjercicioEnlace =document.querySelector(".navPrincipal");//PARA ELLO SELECCIONAMOS EL ELEMENTO PADRE
 selectorEjercicioEnlace.appendChild(ejercicioEnlace)//APPENCHILD ME PERMITE AGREGAR ELEMENTOS HIJOS
 
