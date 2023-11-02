@@ -220,6 +220,12 @@ botonNotificacion.addEventListener("click",function(evento){
 
 //EVENTOS CON EL TECLADO
 //EVENTOS EN LOS INPUTS Y TEXTAREA
+let datos={
+    Nombre:"",
+    Email:"",
+    Mensaje:""
+}
+
 
 const nombre = document.querySelector("#Nombre");
 
@@ -235,6 +241,7 @@ nombre.addEventListener("input", function(evento){ // ESTE EVENTO ES A TIEMPO RE
     console.log("Escribiendo nombre con input...");
     console.log(evento)
     console.log(evento.target.value);
+    console.log(evento.target.id);
      //ME MUESTRA POR PANTALLA EN EL DATA LA INFORMACIÓN
     // EN UN INPUT LA INFORMACIÓN SE ALMACENA EN EL VALUE
 })
@@ -245,6 +252,8 @@ nombre.addEventListener("input", function(evento){ // ESTE EVENTO ES A TIEMPO RE
 // DIGA, ESTA ES LA WEB DE .... CON CORREO ... Y SU
 // PROPUESTA ES: .....
 
+
+
 const emailF = document.querySelector("#Email");
 const mensajeF = document.querySelector("#Mensaje");
 let resultadoNombre,
@@ -253,16 +262,19 @@ let resultadoNombre,
 emailF.addEventListener("input", function(evento){
     resultadoEmail = evento.target.value;
     actualizarTexto();
+    leertexto(evento);
 });
 
 mensajeF.addEventListener("input", function(evento){
     resultadoMensaje = evento.target.value;
     actualizarTexto();
+    leertexto(evento);
 });
 
 nombre.addEventListener("input", function(evento){
     resultadoNombre = evento.target.value;
     actualizarTexto();
+    leertexto(evento);
 });
 
 
@@ -283,14 +295,14 @@ function actualizarTexto(){
 
 // E IR ALMACENANDO LOS RESULTADOS DEL FORMULARIO
 
-/*
+
 function leertexto(evento){
     datos[evento.target.id] = evento.target.value; 
     //IMPORTANTE QUE SE LLAME EL ID COMO LA PROPIEDAD DEL OBJETO
     console.log(datos); 
 }
 
-*/
+
 
 
 
@@ -319,5 +331,15 @@ DESPUES EVENTOS
 POR ULTIMO FUNCIONES
 
 
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!
+EJERCICIO
+
+CREAR UN ARCHIVO .JSON QUE ALMACENE LA INFO DE ZONAS TUCARRERADIGITAL
+
+CREAR UN FETCH QUE ME LEA LA INFORMACIÓN Y ME LA MUESTRE POR PANTALLA
+EN EL MISMO FORMATO QUE SE MUESTRA
 
 */
