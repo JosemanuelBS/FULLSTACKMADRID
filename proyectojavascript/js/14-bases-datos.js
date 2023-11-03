@@ -222,7 +222,7 @@ FIN DEL REPASO
                 
                 TENEMOS QUE CREAR UNA VARIABLE DE ENTORNO
                 DEL SISTEMA CON EL VALOR DE RUTA DE
-                C:\Program Files\MySQL\MySQL Server 8.0\bin
+                C:\Program Files\MySQL\MySQL Server 8.2\bin
 
             PARA QUE ME PERMITA USAR LOS COMANDOS DE MYSQL DESDE POWERSHELL
 
