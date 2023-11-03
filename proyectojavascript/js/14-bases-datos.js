@@ -120,7 +120,7 @@ DIAPOSITIVA 22
 
             AÑADO
             LoadModule php_module "C:/php/php8apache2_4.dll"
-            AddHandler application/x.httpd-php .php
+            AddHandler application/x-httpd-php .php
             PHPIniDir "C:/php"
 
             REINICIAR SERVICIO APACHE24
@@ -166,6 +166,47 @@ DIAPOSITIVA 22
 
                 php -v PARA VER VERSION DE PHP EN TERMINAL
 
+
+
+
+
+
+
+
+/*
+**************************************************
+COMIENZO DE CLASE 2023/11/03
+**************************************************
+
+
+
+*******************
+REPASO DÍA ANTERIOR
+
+    INTRODUCCION A BASE DE DATOS
+        ALMACENAR Y ORDENAR UNA GRAN CANTIDAD DE DATOS, ACTUALIZAR INFORMACIÓN
+        SQL EL LENGUAJE
+        MYSQL ES GESTOR DE BASES DE DATOS
+
+    TIPOS DE BASES DE DATOS
+        BASE DE DATOS RELACIONALES
+        EN CADA FILA HAY UNA INSTANCIA
+        COLUMNA EL TIPO DE DATOS
+
+    TIPO DE RELACIONES DE BASE DE DATOS
+        1 A MUCHOS
+        MUCHOS A MUCHOS
+        1 A 1
+
+    STACK AMP, APACHE, MYSQL, PHP
+        APACHE SERVIDOR
+        MYSQL GESTOR DE BASE DATOS
+        PHP LENGUAJE PROGRAMACIÓN
+
+
+FIN DEL REPASO
+*******************
+
             
             INSTALAR Y CONFIGURAR MYSQL
                 dev.mysql.com/downloads/mysql
@@ -174,7 +215,7 @@ DIAPOSITIVA 22
                 TO PALANTE
                 NO IMPORTA LOS ERRORES
                 DEFINIR UN PASSWORD
-                FullstackMadrid
+                Fullstack
 
                 PODEMOS VER EL SERVICIO DE MYSQL Y SI NOS CONSUME MUCHA MEMORIA
                 DETENERLO CUANDO NO LO USEMOS
@@ -196,14 +237,11 @@ DIAPOSITIVA 22
                 Host: localhost
                 User: root
                 Port: 3306
-                Password: FullstackMadrid
+                Password: Fullstack
 
                 YA TENEMOS LA CONEXIÓN A MI BASE DE DATOS
 
-            COMPOSER, ME VA A MEJORAR MI CODIGO PHP. AÑADIR DEPENDENCIAS
-                getcomposer.org
-
-            CREAR VARIABLE DE ENTORNO DEL SISTEMA PARA MYSQL SERVER BIN
+        
 
             
             
@@ -233,76 +271,17 @@ EN MAC
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-*******************
-    COMIENZO CLASE
-*******************
-
-*******************
-REPASO DÍA ANTERIOR
-
-    INTRODUCCION A BASE DE DATOS
-        ALMACENAR Y ORDENAR UNA GRAN CANTIDAD DE DATOS, ACTUALIZAR INFORMACIÓN
-        SQL EL LENGUAJE
-        MYSQL ES GESTOR DE BASES DE DATOS
-
-    TIPOS DE BASES DE DATOS
-        BASE DE DATOS RELACIONALES
-        EN CADA FILA HAY UNA INSTANCIA
-        COLUMNA EL TIPO DE DATOS
-
-    TIPO DE RELACIONES DE BASE DE DATOS
-        1 A MUCHOS
-        MUCHOS A MUCHOS
-        1 A 1
-
-    STACK AMP, APACHE, MYSQL, PHP
-        APACHE SERVIDOR
-        MYSQL GESTOR DE BASE DATOS
-        PHP LENGUAJE PROGRAMACIÓN
-
-
-FIN DEL REPASO
-*******************
-
-
 SINTAXIS BÁSICA DE CONSULTA DE BASE DE DATOS
 
 ABRIMOS POWERSHELL, QUE SERÁ LA TERMINAL QUE USAREMOS
 PARA LA CONSULTA DE LA BASE DE DATOS
 
 EL PRIMER COMANDO QUE ME PERMITE INICIAR SESION MYSQL
-ES OBLIGATORIO EL ; AL FINAL
+ES OBLIGATORIO EL ; AL FINAL ES EL QUE FINALIZA LA ORDEN
 
     mysql -u root -p;
 
-    PASSWORD: FullstackVigo En mac nada
+    PASSWORD: Fullstack En mac nada
 
 PARA VER LAS BASES DE DATOS
 
@@ -321,7 +300,7 @@ CREAR UNA NUEVA BASE DE DATOS
 
 USAR UNA BASE DE DATOS
 
-    USE peluqueria ;
+    USE peluqueria;
 
 PARA MOSTRAR LAS TABLAS
 
@@ -333,7 +312,8 @@ CREAR UNA NUEVA TABLA
 
     CREATE TABLE servicios(
     id INT(11) NOT NULL AUTO_INCREMENT,
-    nombre VARCHAR(60), //HASTA 60 CARACTERES, SI SE PASA LO CORTA Y COGE LOS 6O PRIMEROS
+    nombre VARCHAR(60), //HASTA 60 CARACTERES, 
+    //SI SE PASA LO CORTA Y COGE LOS 6O PRIMEROS
     precio DECIMAL(5,2), //100.00
     PRIMARY KEY (id)
     );
@@ -415,7 +395,7 @@ MOSTRAR LOS REGISTROS CUYO PRECIO SEA MAYOR QUE 15
 ACTUALIZAR REGISTROS
 VAMOS A VARIAR EL PRECIO DEL Corte de Cabelle Hombre a 20€
 
-        UPDATE servicios SET precio=20 WHERE id=1; // CON , ACTUALIZO LOS CAMPOS QUE QUIERA
+        UPDATE servicios SET precio=20 WHERE id=1; // ACTUALIZO LOS CAMPOS QUE QUIERA
         HAY QUE INDICAR SIEMPRE CON EL WHERE QUE REGISTRO ACTUALIZAMOS
 
         MOSTRAR LA TABLA PARA VER LA ACTUALIZACION
