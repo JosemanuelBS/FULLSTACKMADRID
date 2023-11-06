@@ -495,7 +495,7 @@ REPASO DÍA ANTERIOR
 
     REGISTROS EN TABLAS
         CREATE
-            INSERT INTO servicios(nombre,precio) VALUE ("Tinte",5);
+            INSERT INTO servicios(nombre,precio) VALUES ("Tinte",5);
         READ
             SELECT nombre FROM servicios WHERE id=3
         UPDATE
@@ -581,10 +581,21 @@ CREATE TABLE reservas (
     idservicios INT(11) NOT NULL,
     hora TIME DEFAULT NULL, // SI NO SE PASA NINGUN VALOR TOMA LA HORA DEL REGISTRO
     fecha DATE DEFAULT NULL, // IGUAL QUE LA HORA
-    idservicio VARCHAR(255) NOT NULL,
-    PRIMARY KEY(idreservas),
-    FOREIGN KEY idservicios REFERENCE servicios(id),
-    FOREIGN KEY idclientes REFERENCE clientes(id)
+    PRIMARY KEY(id),
+    FOREIGN KEY (idservicios) REFERENCES servicios(id),
+    FOREIGN KEY (idclientes) REFERENCES clientes(id)
+);
+
+
+CREATE TABLE reservas (
+    id INT(11) NOT NULL AUTO_INCREMENT,
+    idclientes INT(11) NOT NULL,
+    idservicios INT(11) NOT NULL,
+    hora TIME DEFAULT NULL,
+    fecha DATE DEFAULT NULL,
+    PRIMARY KEY(id),
+    FOREIGN KEY (idservicios) REFERENCES servicios(id),
+    FOREIGN KEY (idclientes) REFERENCES clientes(id)
 );
 
 
