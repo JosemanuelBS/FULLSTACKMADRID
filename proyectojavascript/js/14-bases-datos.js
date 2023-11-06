@@ -599,9 +599,175 @@ CREATE TABLE reservas (
 );
 
 
+
+
+/////////////////////////////////
+BASE DE DATOS DE UN COLEGIO
+
+TABLAS:
+    ALUMNOS
+    PROFESORES
+    CURSOS
+    ASIGNATURAS
+    HORARIOS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- INICIO CODIGO SQL:
+
+-- PARA PONER COMENTARIOS
+
+-- CREAMOS NUESTRA BASE DE DATOS
+CREATE DATABASE colegio;
+
+-- CREAMOS LAS TABLAS
+
+-- TABLA profesores
+CREATE TABLE profesores( id INT NOT NULL AUTO_INCREMENT, nombre VARCHAR(60), apellidos VARCHAR (60), titulacion VARCHAR(100) NOT NULL, telefono VARCHAR(15), PRIMARY KEY (id));
+
+-- TABLA cursos
+CREATE TABLE cursos( id INT NOT NULL AUTO_INCREMENT, nombre VARCHAR(60), idtutor INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (idtutor) REFERENCES profesores(id));
+
+-- TABLA alumnos
+CREATE TABLE alumnos( id INT NOT NULL AUTO_INCREMENT, nombre VARCHAR(60), apellidos VARCHAR (60), fechanacimiento DATE NOT NULL, telefono VARCHAR(15), idcurso INT NOT NULL, PRIMARY KEY (id), FOREIGN KEY (idcurso) REFERENCES cursos(id));
+
+-- TABLA asignaturas
+CREATE TABLE asignaturas( id INT NOT NULL AUTO_INCREMENT, nombre VARCHAR(60), idcurso INT NOT NULL, idprofesor INT NOT NULL, PRIMARY KEY(id), FOREIGN KEY (idcurso) REFERENCES cursos(id), FOREIGN KEY(idprofesor) REFERENCES profesores(id));
+
+-- TABLA horarios
+CREATE TABLE horarios( id INT NOT NULL AUTO_INCREMENT, hora TIME NOT NULL, diasemana VARCHAR(10), idasignatura INT NOT NULL, PRIMARY KEY(id), FOREIGN KEY (idasignatura) REFERENCES asignaturas(id));
+
+-- AHORA AÑADIMOS REGISTROS A LAS TABLAS
+
+-- Registros adicionales para la tabla "profesores"
+INSERT INTO profesores (nombre, apellidos, titulacion, telefono) VALUES
+    ('Laura', 'García', 'Licenciada en Informática', '111-222-3333'),
+    ('Miguel', 'Hernández', 'Licenciado en Biología', '444-555-6666'),
+    ('Carmen', 'Jiménez', 'Licenciada en Psicología', '777-888-9999'),
+    ('Manuel', 'Ruiz', 'Licenciado en Geografía', '333-222-1111'),
+    ('Isabel', 'Sánchez', 'Licenciada en Química', '666-555-4444'),
+    ('José', 'López', 'Licenciado en Historia del Arte', '999-888-7777'),
+    ('Sara', 'González', 'Licenciada en Lengua Española', '111-111-1111'),
+    ('Antonio', 'Fernández', 'Licenciado en Economía', '222-222-2222');
+
+-- Registros adicionales para la tabla "cursos"
+INSERT INTO cursos (nombre, idtutor) VALUES
+    ('1A', 6),
+    ('1B', 7),
+    ('1C', 8),
+    ('2A', 2),
+    ('2B', 1),
+    ('2C', 8),
+    ('3A', 3),
+    ('3B', 3),
+    ('3C', 5),
+    ('4A', 4),
+    ('4B', 1),
+    ('4C', 5);
+
+-- Registros adicionales para la tabla "alumnos"
+INSERT INTO alumnos (nombre, apellidos, fechanacimiento, telefono, idcurso) VALUES
+    ('Alejandro', 'Rodríguez', '2003-08-20', '555-333-2222', 6),
+    ('Beatriz', 'Fernández', '2002-11-10', '444-555-6666', 7),
+    ('Carlos', 'González', '2004-02-05', '777-888-9999', 8),
+    ('Diana', 'López', '2003-04-15', '111-222-3333', 9),
+    ('Elena', 'Martínez', '2002-07-28', '666-777-8888', 10),
+    ('Francisco', 'Pérez', '2004-01-02', '222-333-4444', 6),
+    ('Gloria', 'Sánchez', '2003-03-18', '555-666-7777', 7),
+    ('Héctor', 'Torres', '2002-09-30', '333-444-5555', 8),
+    ('Inés', 'Jiménez', '2003-12-10', '999-111-2222', 9),
+    ('Javier', 'Vargas', '2002-06-25', '777-222-1111', 10),
+    ('Karen', 'Hernández', '2004-03-12', '555-111-2222', 6),
+    ('Luisa', 'Santos', '2002-07-05', '444-666-8888', 7),
+    ('Manuel', 'Gómez', '2003-09-20', '333-999-1111', 8),
+    ('Natalia', 'Ruiz', '2001-12-15', '777-555-3333', 9),
+    ('Óscar', 'Fernández', '2004-04-28', '111-222-4444', 10),
+    ('Patricia', 'García', '2003-01-10', '666-333-7777', 6),
+    ('Quintín', 'Martínez', '2002-02-18', '555-777-9999', 7),
+    ('Rosa', 'López', '2004-05-30', '777-222-4444', 8),
+    ('Sergio', 'Vargas', '2002-08-10', '333-444-5555', 9),
+    ('Teresa', 'Jiménez', '2003-11-28', '999-666-1111', 10), 
+    ('Ulises', 'Morales', '2003-07-15', '444-555-6666', 6),
+    ('Valentina', 'Hernández', '2002-09-20', '555-333-2222', 7),
+    ('William', 'Pérez', '2004-01-05', '666-444-5555', 8),
+    ('Ximena', 'Gómez', '2003-03-15', '777-999-1111', 9),
+    ('Yolanda', 'Torres', '2002-06-28', '111-666-4444', 10),
+    ('Zacarías', 'Fernández', '2004-04-10', '999-777-2222', 6),
+    ('Alejandra', 'García', '2003-03-12', '555-444-1111', 7),
+    ('Baltasar', 'Ruiz', '2002-08-05', '444-666-8888', 8),
+    ('Candela', 'Santos', '2001-12-20', '333-111-5555', 9),
+    ('Damián', 'Vargas', '2004-02-18', '222-333-4444', 10);
+
+-- Registros adicionales para la tabla "asignaturas"
+INSERT INTO asignaturas (nombre, idcurso, idprofesor) VALUES
+    ('Lengua', 6, 3),
+    ('Mates', 7, 6),
+    ('Geo', 8, 4),
+    ('Inglés', 9, 5),
+    ('Cono', 10, 4),
+    ('Ciudadanía', 6, 4),
+    ('Eduación Física', 7, 8),
+    ('Historia', 8, 4),
+    ('Frances', 9, 1);
+
+-- Registros adicionales para la tabla "horarios"
+INSERT INTO horarios (hora, diasemana, idasignatura) VALUES
+    ('09:00:00', 'Lunes', 6),
+    ('10:00:00', 'Martes', 7),
+    ('11:00:00', 'Miércoles', 8),
+    ('11:30:00', 'Jueves', 9),
+    ('12:30:00', 'Viernes', 1),
+    ('13:00:00', 'Lunes', 2),
+    ('14:00:00', 'Martes', 3),
+    ('09:00:00', 'Viernes', 6),
+    ('10:00:00', 'Viernes', 7),
+    ('11:00:00', 'Miércoles', 8),
+    ('11:30:00', 'Jueves', 9),
+    ('12:30:00', 'Viernes', 3),
+    ('13:00:00', 'Lunes', 4),
+    ('14:00:00', 'Viernes', 1),
+    ('09:00:00', 'Lunes', 6),
+    ('10:00:00', 'Viernes', 7),
+    ('11:00:00', 'Miércoles', 8),
+    ('11:30:00', 'Jueves', 9),
+    ('12:30:00', 'Viernes', 4),
+    ('13:00:00', 'Viernes', 2),
+    ('14:00:00', 'Martes', 2);
+
+--FIN DEL CODIGO SQL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ORDENAR CONSULTA
 
-    SELECT * FROM servicios WHERE precio>12 ORDER BY precio;
+    SELECT * FROM servicios WHERE precio>12 ORDER BY precio ASC;
 
 SELECCIONAR DATOS ENTRE DOS VALORES
 
