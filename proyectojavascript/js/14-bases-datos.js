@@ -758,106 +758,8 @@ INSERT INTO horarios (hora, diasemana, idasignatura) VALUES
 
 
 
-
-
-
-
-
-
-
-
-
-
-ORDENAR CONSULTA
-
-    SELECT * FROM servicios WHERE precio>12 ORDER BY precio ASC;
-
-SELECCIONAR DATOS ENTRE DOS VALORES
-
-    SELECT * FROM servicios WHERE precio BETWEEN 10 AND 16; INLCUIDOS
-
-FUNCIONES AGREGADORAS
-
-    CONTADOR********
-
-    SELECT COUNT (id), fecha
-    FROM reservas
-    GROUP BY precio DESC;
-
-    ME CONTARÁ TODOS LOS ID QUE TENGAN EL MISMO PRECIO Y ME LOS ORDENARÁ DE MAYOR A MENOR
-
-
-    SUMA************
-
-    SELECT SUM(precio) AS totalServicios FROM servicios; 
-    totalServicios ES UN ALIAS QUE USAMOS DE MANERA VIRTUAL
-    SE CREA EN ESE MOMENTO PARA MOSTRARLO Y NADA MÁS, PERO
-    NO EXISTE EN NUESTRA BASE DE DATOS
-
-
-    MÍNIMO/MÁXIMO*******
-
-    SELECT MIN(precio) AS precioMenor FROM servicios;
-    SELECT MAX(precio) AS precioMayor FROM servicios;
-
-
-COMO BUSCAR EN UNA BASE DE DATOS
-
-    SELECT * FROM servicios WHERE nombre LIKE "Corte%";
-
-    Corte%      INICIA CON CORTE 
-    %Corte      FINALIZA CON CORTE
-    %Corte%     CONTIENE CORTE, DA IGUAL QUE ESTÉ AL INICIO, AL FINAL O EN MEDIO
-
-CONCATENAR COLUMNAS (UNIR)
-
-
-    SELECT CONCAT(nombre," ",apellidos) AS nombreCompleto FROM clientes;
-    ME CREA DE NUEVO UN ALIAS VIRTUAL
-
-    SELECT * FROM clientes
-    WHERE CONCAT(nombre," ",apellidos) LIKE "%Juan Bartolo%";
-
-    SELECT nombre, apellidos, CONCAT(nombre," ",apellidos) as nombreCompleto FROM clientes;
-    ME AÑADE UNA COLUMNA NUEVA CON LA CONCATENACIÓN, PERO ES VIRTUAL
-    SIEMPRE QUE CREO UN ALIAS ES VIRTUAL, NO SE ALMACENA EN MI TABLA
-
-MUTIPLES CONDICIONES
-
-    SELECT * FROM reservas WHERE id IN(1,3,4);
-    CON EL IN LE DAMOS MÚLTIPLES VALORES
-
-    SELECT * FROM reservas WHERE fecha="2023-03-29" AND id>3;
-    EL OPERADOR AND ME PERMITE APLICAR MÚLTIPLES CONDICIONES
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 *******************
-    COMIENZO CLASE
+    COMIENZO CLASE 2023/11/07
 *******************
 
 *******************
@@ -878,66 +780,123 @@ REPASO DÍA ANTERIOR
     ELIMINAR TABLAS COMPLETAS DE MI BASE DE DATOS
             DROP TABLE tiempos;
 
-    ORDENAR CONSULTA
-            SELECT * FROM servicios WHERE precio>12 ORDER BY precioE;
-
-    SELECCIONAR DATOS ENTRE DOS VALORES
-            SELECT * FROM servicios WHERE precio BETWEEN 10 AND 16; INLCUIDOS
-
-    FUNCIONES AGREGADORAS
-
-        CONTADOR********
-            SELECT COUNT (id), fecha
-            FROM reservas
-            GROUP BY fecha DESC;
-
-
-        SUMA************
-            SELECT SUM(precio) AS totalServicios FROM servicios; 
-            totalServicios ES UN ALIAS QUE USAMOS DE MANERA VIRTUAL
-            SE CREA EN ESE MOMENTO PARA MOSTRARLO Y NADA MÁS, PERO
-            NO EXISTE EN NUESTRA BASE DE DATOS
-
-
-        MÍNIMO/MÁXIMO*******
-            SELECT MIN(precio) AS precioMenor FROM servicios;
-            SELECT MAX(precio) AS precioMayor FROM servicios;
-
-
-    COMO BUSCAR EN UNA BASE DE DATOS
-            SELECT * FROM servicios WHERE nombre LIKE "Corte%";
-
-            Corte%      INICIA CON CORTE 
-            %Corte      FINALIZA CON CORTE
-            %Corte%     CONTIENE CORTE, DA IGUAL QUE ESTÉ AL INICIO, AL FINAL O EN MEDIO
-
-    CONCATENAR COLUMNAS (UNIR)
-            SELECT CONCAT(nombre," ",apellidos) AS nombreCompleto FROM reservas;
-            ME CREA DE NUEVO UN ALIAS VIRTUAL
-
-            SELECT * FROM reservas
-            WHERE CONCAT(nombre," ",apellidos) LIKE "%Juan Bartolo%";
-
-            SELECT hora, fecha, CONCAT(nombre," ",apellidos) as nombreCompleto FROM reservas;
-            ME AÑADE UNA COLUMNA NUEVA CON LA CONCATENACIÓN, PERO ES VIRTUAL
-            SIEMPRE QUE CREO UN ALIAS ES VIRTUAL, NO SE ALMACENA EN MI TABLA
-
-    MULTIPLES CONDICIONES
-            SELECT * FROM reservas WHERE id IN(1,3,4);
-            CON EL IN LE DAMOS MÚLTIPLES VALORES
-
-            SELECT * FROM reservas WHERE fecha="2023-03-29" AND id>3;
-            EL OPERADOR AND ME PERMITE APLICAR MÚLTIPLES CONDICIONES
 
 FIN DEL REPASO
 *******************
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ORDENAR CONSULTA
+
+    SELECT * FROM servicios WHERE precio>12 ORDER BY precio ASC;
+
+    !!!!!!!!!!!!!!!!
+    EJERCICIO
+    MOSTRAR LOS ALUMNOS QUE CUMPLEN AÑOS EN DICIEMBRE
+
+SELECCIONAR DATOS ENTRE DOS VALORES
+
+    SELECT * FROM servicios WHERE precio BETWEEN 10 AND 16; INLCUIDOS
+
+    !!!!!!!!!!!!!!!!!
+    EJERCICIO
+    MOSTRAR LOS ALUMNOS QUE NACIERON ENTRE 2002 Y 2003 INCLUIDOS
+
+FUNCIONES AGREGADORAS
+
+    CONTADOR********
+
+    SELECT COUNT (id), fecha
+    FROM reservas
+    GROUP BY precio DESC;
+
+    !!!!!!!!!!!!!!
+    EJERCICIO
+    CONTAR EL NUMERO DE ALUMNOS QUE HAY POR AÑO Y ORDENARLOS DE MENOR A MAYOR EDAD
+
+
+    SELECT idprofesor, COUNT(idcurso) FROM asignaturas GROUP BY idprofesor;
+
+    ME CONTARÁ TODOS LOS ID QUE TENGAN EL MISMO PRECIO Y ME LOS ORDENARÁ DE MAYOR A MENOR
+
+
+    SUMA************
+
+    SELECT SUM(precio) AS totalServicios FROM servicios; 
+    totalServicios ES UN ALIAS QUE USAMOS DE MANERA VIRTUAL
+    SE CREA EN ESE MOMENTO PARA MOSTRARLO Y NADA MÁS, PERO
+    NO EXISTE EN NUESTRA BASE DE DATOS
+
+
+
+    MÍNIMO/MÁXIMO*******
+
+    SELECT MIN(precio) AS precioMenor FROM servicios;
+    SELECT MAX(precio) AS precioMayor FROM servicios;
+
+
+COMO BUSCAR EN UNA BASE DE DATOS
+
+    SELECT * FROM servicios WHERE nombre LIKE "Corte%";
+
+    Corte%      INICIA CON CORTE 
+    %Corte      FINALIZA CON CORTE
+    %Corte%     CONTIENE CORTE, DA IGUAL QUE ESTÉ AL INICIO, AL FINAL O EN MEDIO
+
+    !!!!!!!!!!!!!!
+    EJERCICIO
+    BUSCAR TODOS LOS ALUMNOS QUE SE LLAMEN LOPEZ DE APELLIDO
+
+    LOS PROFESORES ESPECIALISTAS EN ECONOMIA
+
+CONCATENAR COLUMNAS (UNIR)
+
+
+    SELECT CONCAT(nombre," ",apellidos) AS nombreCompleto FROM profesores;
+    ME CREA DE NUEVO UN ALIAS VIRTUAL
+
+    SELECT * FROM alumnos
+    WHERE CONCAT(nombre," ",apellidos) LIKE "%Yolanda Torres%";
+
+    SELECT nombre, apellidos, CONCAT(nombre," ",apellidos) as nombreCompleto FROM alumnos;
+    ME AÑADE UNA COLUMNA NUEVA CON LA CONCATENACIÓN, PERO ES VIRTUAL
+    SIEMPRE QUE CREO UN ALIAS ES VIRTUAL, NO SE ALMACENA EN MI TABLA
+
+MULTIPLES CONDICIONES
+
+    SELECT * FROM reservas WHERE id IN(1,3,4);
+    CON EL IN LE DAMOS MÚLTIPLES VALORES
+
+    SELECT * FROM reservas WHERE fecha="2023-03-29" AND id>3;
+    EL OPERADOR AND ME PERMITE APLICAR MÚLTIPLES CONDICIONES
+
+    !!!!!!!!!!!!!!!!
+    SELECCIONAR LOS ALUMNOS QUE SON DEL 2022 Y QUE SON DEL CURSO CON ID 6
+
+
+
+
+
+
+
+
     REGLAS DE NORMALIZACION
     OPTIMIZAR BASE DE DATOS EN FUNCION A UNAS REGLAS YA DEFINIDAS
 
-    PONER DIAPOSITIVA26
+    PONER DIAPOSITIVA 26
 
         HAY QUE APLICARLAS EN ORDEN
 
