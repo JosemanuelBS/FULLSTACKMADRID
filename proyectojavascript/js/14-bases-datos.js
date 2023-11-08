@@ -963,24 +963,35 @@ MULTIPLES CONDICIONES
             UNO A UNO
             MUCHOS A UNO
 
-        !!!!!!!!!!!!!!!!
-        EJERCICIO
-        HACER EL DIAGRAMA ER DE LA BASE DE DATOS DE AEROPUERTO
+
+    
+
+*******************
+    COMIENZO CLASE 2023/11/08
+*******************
+
+*******************
+REPASO DÍA ANTERIOR
+    
 
 
 
         VAMOS A EMPEZAR A UNIR TABLAS, JOIN
 
-        PARTIMOS DE LAS TABLAS RESERVAS Y CLIENTES
+        PARTIMOS DE LAS TABLAS ALUMNOS Y CURSOS
 
-                SELECT * FROM reservas 
-                INNER JOIN clientes ON clientes.id = reservas.idCliente;
+                SELECT * FROM alumnos 
+                INNER JOIN cursos ON cursos.id = alumnos.idcurso;
+
+                SELECT * FROM alumnos LEFT JOIN cursos ON cursos.id=alumnos.idcurso;
 
                 INNER JOIN SOLO ME MUESTRA CUANDO TENGAMOS VALORES
-                LEFT JOIN PRIMERO CONSULTA citas Y AÑADE VALORES A LAS QUE TENGA
+                LEFT JOIN PRIMERO CONSULTA alumnos Y AÑADE VALORES A LAS QUE TENGA
                 INNER Y LEFT TIENEN EL MISMO RESULTADO
 
-                RIGHT JOIN PRIMERO CONSULTA clientes Y AÑADE VALORES A LAS QUE TENGA
+                RIGHT JOIN PRIMERO CONSULTA cursos Y AÑADE VALORES A LAS QUE TENGA
+
+                SELECT * FROM alumnos RIGHT JOIN cursos ON cursos.id=alumnos.idcurso;
 
 
 
@@ -993,6 +1004,19 @@ MULTIPLES CONDICIONES
                 MULTIPLES JOIN
                 HACER UN JOIN A UNA TABLA QUE YA TIENE UN JOIN
 
+                SELECT alumnos.nombre AS nombrealumno, profesores.nombre as nombreprofe FROM alumnos INNER JOIN cursos ON cursos.id = alumnos.idcurso INNER JOIN profesores ON profesores.id = cursos.idtutor;
+
+
+        !!!!!!!!!!!!!!!!
+        EJERCICIO
+        A QUE HORA Y DIA TIENE CLASE CADA ALUMNO
+        NOMBRE Y APELLIDOS DEL ALUMNO
+        Y LA HORA Y DIA DE LA SEMANA
+
+        !!!!!!!!!!!!!!!!
+        EJERCICIO
+        HACER EL DIAGRAMA ER DE LA BASE DE DATOS DE AEROPUERTO
 
 
 */
+

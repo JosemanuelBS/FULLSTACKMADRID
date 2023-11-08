@@ -7,6 +7,8 @@
     <link rel="preload" href="./style.css" as="style">
     <link href="./style.css" rel="stylesheet">
     
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.css' rel='stylesheet' />
+
     <title>Document</title>
 </head>
 <body>
@@ -86,5 +88,21 @@
     <!-- <script src="./js/12-dom.js"></script> -->
     <script src="./js/13-eventos.js"></script>
     
+
+    <div id='calendario'></div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.0/fullcalendar.min.js'></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#calendario').fullCalendar({
+                // Configuración del calendario aquí
+            });
+        });
+    </script>
+
+
 </body>
 </html>
